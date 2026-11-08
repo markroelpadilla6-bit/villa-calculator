@@ -2557,6 +2557,23 @@ function processVillaPart(part, nights) {
  };
 }
 
+function isSamuiVilla(villaName) {
+ let cleanKey = cleanVillaKey(villaName);
+ const samuiList = ['villaraku', 'villaanavaya', 'villahin', 'villaakatsuki', 'villapraana', 'villatheview', 'villapuri', 'villariva', 'villaamylia', 'villaemerald', 'villamiabeach', 'villamiapalm', 'beachfrontparadise', 'villamaliya', 'villaasan', 'villahinyai', 'villasairee', 'villasuriya', 'villasangsuri2', 'villasangsuri3', 'villasamlarn', 'villachi', 'elementof8', 'villainasia', 'tawantok1', 'tawantok2', 'villathansamaay', 'villamiaocean', 'villakohkoon', 'villalotus', 'theresidencesila', 'theresidencewayu', 'villahibiscus', 'villalotusmiska', 'villawaterlily', 'villasiritarar', 'villakelapa'];
+ if (samuiList.some(s => s === cleanKey || s.includes(cleanKey) || cleanKey.includes(s))) {
+  return true;
+ }
+ let matchedTemplate = findTemplateKey(villaName);
+ if (matchedTemplate && samuiList.includes(matchedTemplate)) {
+  return true;
+ }
+ let dbRec = findDatabaseRecord(villaName);
+ if (dbRec && dbRec.url && dbRec.url.toLowerCase().includes('samui')) {
+  return true;
+ }
+ return false;
+}
+
 function gen(){
  try {
   let nightsInput = document.getElementById('nights').value;
@@ -2606,9 +2623,7 @@ function gen(){
       if(res.isPromo) hasAnyPromo = true;
       partsCalculated.push(res);
 
-      let cleanKey = cleanVillaKey(res.villa);
-      const samuiList = ['villaraku', 'villaanavaya', 'villahin', 'villaakatsuki', 'villapraana', 'villatheview', 'villapuri', 'villariva', 'villaamylia', 'villaemerald', 'villamiabeach', 'villamiapalm', 'beachfrontparadise', 'villamaliya', 'villaasan', 'villahinyai', 'villasairee', 'villasuriya', 'villasangsuri2', 'villasangsuri3', 'villasamlarn', 'villachi', 'elementof8', 'villainasia', 'tawantok1', 'tawantok2', 'villathansamaay', 'villamiaocean', 'villakohkoon', 'villalotus', 'theresidencesila', 'theresidencewayu', 'villahibiscus', 'villalotusmiska', 'villawaterlily', 'villasiritarar', 'villakelapa'];
-      if (samuiList.includes(cleanKey)) {
+      if (isSamuiVilla(res.villa)) {
        hasSamuiVilla = true;
       } else {
        hasPhuketVilla = true;
@@ -2726,9 +2741,7 @@ function gen(){
    } else {
     let res = processVillaPart(line, nights);
     if (res) {
-     let cleanKey = cleanVillaKey(res.villa);
-     const samuiList = ['villaraku', 'villaanavaya', 'villahin', 'villaakatsuki', 'villapraana', 'villatheview', 'villapuri', 'villariva', 'villaamylia', 'villaemerald', 'villamiabeach', 'villamiapalm', 'beachfrontparadise', 'villamaliya', 'villaasan', 'villahinyai', 'villasairee', 'villasuriya', 'villasangsuri2', 'villasangsuri3', 'villasamlarn', 'villachi', 'elementof8', 'villainasia', 'tawantok1', 'tawantok2', 'villathansamaay', 'villamiaocean', 'villakohkoon', 'villalotus', 'theresidencesila', 'theresidencewayu', 'villahibiscus', 'villalotusmiska', 'villawaterlily', 'villasiritarar', 'villakelapa'];
-     if (samuiList.includes(cleanKey)) {
+     if (isSamuiVilla(res.villa)) {
       hasSamuiVilla = true;
      } else {
       hasPhuketVilla = true;
