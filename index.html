@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html><head><meta charset="utf-8"><title>VillaQUOTE V11.9.3</title>
+<html><head><meta charset="utf-8"><title>VillaQUOTE V11.9.4</title>
 <style>
 body{font-family:'Times New Roman', Times, serif;background:#f4f4f4;padding:30px}
 .container{max-width:900px;margin:auto;background:#fff;padding:20px;border-radius:8px;position:relative;}
@@ -44,7 +44,7 @@ td{border:1px solid #000;padding:8px 12px;background:#fff;font-size:14px;font-we
 .footer-credit {text-align: right; font-size: 12px; color: #777; margin-top: 25px; font-style: italic;}
 </style></head><body>
 <div class="container">
-<h2>Villa Quote v11.9.3</h2>
+<h2>Villa Quote v11.9.4</h2>
 <div class="logo-container">
  <img src="https://www.theluxurysignature.com/wp-content/uploads/2022/09/TLS-logo.png" alt="The Luxury Signature">
 </div>
@@ -2300,355 +2300,399 @@ const emailProposalTemplates = {
 const agentProposalTemplates = {
  "villaamarelo": `<b><a href="https://amarelophuket.com/" target="_blank">Villa Amarelo</a>, Natai Beach, Phuket</b><br><br>
 <b>{nightlyRateText}</b><br><br>
-<b>Inclusions:</b><br><br>
-&bull; Exclusive use of Villa Amarelo*<br>
-&bull; Taxes and Service Charges<br>
-&bull; Daily American Breakfast between 7AM to 11AM<br>
-&bull; Two way Airport Transfer on the same flight.<br>
-&bull; Welcome Drinks and Fruit Basket.<br>
-&bull; Wireless internet access.<br>
-&bull; Daily Housekeeping Service<br>
-&bull; Turndown Service<br>
-&bull; Gated community with 24-hours estate security.<br>
-&bull; A team of full-time staff at your service including a villa manager, chef, housekeepers.<br>
-&bull; Our chef will do all of your grocery shopping and prepare your meals.(Please note there is 25% of grocery cost as handling fee - subject to 7% VAT).<br>
-&bull; Guest Experience services<br><br>
+<b><u>Inclusions:</u></b>
+<ul style="margin: 8px 0 12px 20px; padding-left: 20px;">
+<li>Exclusive use of Villa Amarelo*</li>
+<li>Taxes and Service Charges</li>
+<li>Daily American Breakfast between 7AM to 11AM</li>
+<li>Two way Airport Transfer on the same flight.</li>
+<li>Welcome Drinks and Fruit Basket.</li>
+<li>Wireless internet access.</li>
+<li>Daily Housekeeping Service</li>
+<li>Turndown Service</li>
+<li>Gated community with 24-hours estate security.</li>
+<li>A team of full-time staff at your service including a villa manager, chef, housekeepers.</li>
+<li>Our chef will do all of your grocery shopping and prepare your meals.(Please note there is 25% of grocery cost as handling fee - subject to 7% VAT).</li>
+<li>Guest Experience services</li>
+</ul>
 <b>Villa Features:</b> *Beachfront Property, Sunset View, 25 Meters Infinity Pool, Family Room, BBQ Facilities, Billiards Table, Ping Pong Table, Kayak and Paddle Boards, Bicycles, Soccer/Football and Volley Ball Equipment, Board Games, Estate Gym.<br><br>
 <b>Location:</b> Natai Beach is located in Phang Nga Province on the southern mainland of Thailand, about 20–25 minutes (approx. 27 km) from Phuket International Airport.<br><br>
 Note that a refundable security deposit of US$ 1,500 is required in any currency and may be paid via Credit Card or Bank transfer 2 days before arrival.`,
 
  "villatievoli": `<b><a href="https://tievoliphuket.com/" target="_blank">Villa Tievoli</a>, Natai Beach, Phuket</b><br><br>
 <b>{nightlyRateText}</b><br><br>
-<b>Inclusions:</b><br><br>
-&bull; Exclusive use of Villa Tievoli*<br>
-&bull; Taxes and Service Charges<br>
-&bull; Daily American Breakfast between 7AM to 11AM<br>
-&bull; Two-way Airport Transfer on the same flight.<br>
-&bull; Welcome Drink and Fruit Basket.<br>
-&bull; Turndown Service<br>
-&bull; Wireless internet access.<br>
-&bull; Gated community with 24-hour estate security.<br>
-&bull; A team of full-time staff at your service including a villa manager, chef, housekeepers.<br>
-&bull; Our chef will do all of your grocery shopping and prepare your meals. (Please note there is 25% of grocery cost as handling fee - subject to 7% VAT).<br>
-&bull; Guest Experience service<br><br>
+<b><u>Inclusions:</u></b>
+<ul style="margin: 8px 0 12px 20px; padding-left: 20px;">
+<li>Exclusive use of Villa Tievoli*</li>
+<li>Taxes and Service Charges</li>
+<li>Daily American Breakfast between 7AM to 11AM</li>
+<li>Two-way Airport Transfer on the same flight.</li>
+<li>Welcome Drink and Fruit Basket.</li>
+<li>Turndown Service</li>
+<li>Wireless internet access.</li>
+<li>Gated community with 24-hour estate security.</li>
+<li>A team of full-time staff at your service including a villa manager, chef, housekeepers.</li>
+<li>Our chef will do all of your grocery shopping and prepare your meals. (Please note there is 25% of grocery cost as handling fee - subject to 7% VAT).</li>
+<li>Guest Experience service</li>
+</ul>
 <b>Villa Features:</b> Beachfront property, Sunset View Property, 25 Meters Infinity Pool, Outdoor Lounge Area, Beauty Room with Sauna & Steam Room, Media Room, Pool Table, Bicycles, Kayak and Paddle board, Spa room with plunge cold pool, Estate Gym.<br><br>
 <b>Location:</b> Natai Beach is located in Phang Nga Province on the southern mainland of Thailand, about 20–25 minutes (approx. 27 km) from Phuket International Airport.<br><br>
 Note that a refundable security deposit of US$ 1,500 is required in any currency and may be paid via Credit Card or Bank transfer 2 days before arrival.`,
 
  "villacielo": `<b><a href="https://cielophuket.com/" target="_blank">Villa Cielo</a>, Natai Beach, Phuket</b><br><br>
 <b>{nightlyRateText}</b><br><br>
-<b>Inclusions:</b><br><br>
-&bull; Exclusive use of Villa Cielo*<br>
-&bull; Taxes and Service Charges<br>
-&bull; Daily American Breakfast between 7AM to 11AM<br>
-&bull; Two-way Airport Transfer on the same flight.<br>
-&bull; Wireless internet access.<br>
-&bull; Turndown service<br>
-&bull; Gated community with 24-hour estate security<br>
-&bull; A team of full-time staff at your service including a villa manager, chef, housekeepers.<br>
-&bull; Our chef will do all of your grocery shopping and prepare your meals. (Please note there is 25% of grocery cost as handling fee - subject to 7% VAT).<br>
-&bull; Guest Experience services<br><br>
+<b><u>Inclusions:</u></b>
+<ul style="margin: 8px 0 12px 20px; padding-left: 20px;">
+<li>Exclusive use of Villa Cielo*</li>
+<li>Taxes and Service Charges</li>
+<li>Daily American Breakfast between 7AM to 11AM</li>
+<li>Two-way Airport Transfer on the same flight.</li>
+<li>Wireless internet access.</li>
+<li>Turndown service</li>
+<li>Gated community with 24-hour estate security</li>
+<li>A team of full-time staff at your service including a villa manager, chef, housekeepers.</li>
+<li>Our chef will do all of your grocery shopping and prepare your meals. (Please note there is 25% of grocery cost as handling fee - subject to 7% VAT).</li>
+<li>Guest Experience services</li>
+</ul>
 <b>Villa Features:</b> *Beachfront property, Sunset View, 25-m Infinity pool, basketball hoop, trampoline and kids play area, Kayaks and Stand-up Paddle Board, Ping Pong Table, Foosball Table, Pool Table, Mini Goal, Bicycles, Spacious Lawn, and Estate Gym.<br><br>
 Note that a refundable security deposit of US$ 1,500 is required in any currency and may be paid via Credit Card or Bank transfer 2 days before arrival.`,
 
  "villaessenza": `<b><a href="https://www.savabeachvillas.com/villa-essenza/" target="_blank">Villa Essenza</a>, Natai Beach, Phuket</b><br><br>
 <b>{nightlyRateText}</b><br><br>
-<b>Inclusions:</b><br><br>
-&bull; Exclusive use of Villa Essenza*<br>
-&bull; Taxes and Service Charges<br>
-&bull; Daily American Breakfast between 7AM to 11AM<br>
-&bull; Two-way Airport Transfer on the same flight.<br>
-&bull; Drinks and Fruit Basket.<br>
-&bull; Turndown Service<br>
-&bull; Wireless internet access.<br>
-&bull; Gated community with 24-hour estate security.<br>
-&bull; A team of full-time staff at your service including a villa manager, chef, housekeepers.<br>
-&bull; Our chef will do all of your grocery shopping and prepare your meals. (Please note there is 25% of grocery cost as handling fee - subject to 7% VAT).<br>
-&bull; Guest Experience services<br><br>
+<b><u>Inclusions:</u></b>
+<ul style="margin: 8px 0 12px 20px; padding-left: 20px;">
+<li>Exclusive use of Villa Essenza*</li>
+<li>Taxes and Service Charges</li>
+<li>Daily American Breakfast between 7AM to 11AM</li>
+<li>Two-way Airport Transfer on the same flight.</li>
+<li>Drinks and Fruit Basket.</li>
+<li>Turndown Service</li>
+<li>Wireless internet access.</li>
+<li>Gated community with 24-hour estate security.</li>
+<li>A team of full-time staff at your service including a villa manager, chef, housekeepers.</li>
+<li>Our chef will do all of your grocery shopping and prepare your meals. (Please note there is 25% of grocery cost as handling fee - subject to 7% VAT).</li>
+<li>Guest Experience services</li>
+</ul>
 <b>Villa Features:</b> Beachfront Property, 25 Meters Infinity pool, TV Room, Pool Table, Ping Pong Table, Lawn for Outdoor Play, Basketball, Soccer, Volleyball Equipment, Stand-up Paddle Boards, Kayaks, Estate Gym.<br><br>
 <b>Location:</b> Natai Beach is located in Phang Nga Province on the southern mainland of Thailand, about 20–25 minutes (approx. 27 km) from Phuket International Airport.<br><br>
 Note that a refundable security deposit of US$ 1,500 is required in any currency and may be paid via Credit Card or Bank transfer 2 days before arrival.`,
 
  "villamaleesai": `<b><a href="https://maleesaiphuket.com/" target="_blank">Villa Malee Sai</a>, Natai Beach, Phuket</b><br><br>
 <b>{nightlyRateText}</b><br><br>
-<b>Inclusions:</b><br><br>
-&bull; Exclusive use of Villa Malee Sai*<br>
-&bull; Taxes and Service Charges<br>
-&bull; Daily American Breakfast between 7AM to 11AM.<br>
-&bull; Two-way Airport Transfer on the same flight.<br>
-&bull; Welcome Drinks and Fruit Basket.<br>
-&bull; Turndown Service.<br>
-&bull; Wireless internet access.<br>
-&bull; Gated community with 24-hour estate security.<br>
-&bull; A team of full-time staff at your service including a villa manager, chef, housekeepers,<br>
-&bull; Our chef will do all of your grocery shopping and prepare your meals.(Please note there is 25% of grocery cost as handling fee - subject to 7% VAT).<br>
-&bull; Guest Experience services<br><br>
+<b><u>Inclusions:</u></b>
+<ul style="margin: 8px 0 12px 20px; padding-left: 20px;">
+<li>Exclusive use of Villa Malee Sai*</li>
+<li>Taxes and Service Charges</li>
+<li>Daily American Breakfast between 7AM to 11AM.</li>
+<li>Two-way Airport Transfer on the same flight.</li>
+<li>Welcome Drinks and Fruit Basket.</li>
+<li>Turndown Service.</li>
+<li>Wireless internet access.</li>
+<li>Gated community with 24-hour estate security.</li>
+<li>A team of full-time staff at your service including a villa manager, chef, housekeepers,</li>
+<li>Our chef will do all of your grocery shopping and prepare your meals.(Please note there is 25% of grocery cost as handling fee - subject to 7% VAT).</li>
+<li>Guest Experience services</li>
+</ul>
 <b>Villa Features:</b> *Beachfront property, Sunset View, 25m Infinity pool, TV home theatre system, Spacious lawn area, Kayak and Paddle Boards, Books and Board Games, Foosball Table, Ping pong Table, Bicycles, Badminton Equipment, and Estate Gym.<br><br>
 <b>Location:</b> Natai Beach is located in Phang Nga Province on the southern mainland of Thailand, about 20–25 minutes (approx. 27 km) from Phuket International Airport.<br><br>
 Note that a refundable security deposit of US$ 1,500 is required in any currency and may be paid via Credit Card or Bank transfer 2 days before arrival.`,
 
  "villaroxo": `<b><a href="https://roxophuket.com/" target="_blank">Villa Roxo</a>, Natai Beach, Phuket</b><br><br>
 <b>{nightlyRateText}</b><br><br>
-<b>Inclusions:</b><br><br>
-&bull; Exclusive use of Villa Roxo*<br>
-&bull; Taxes and Service Charges<br>
-&bull; Daily American Breakfast between 7AM to 11AM.<br>
-&bull; Two-way Airport Transfer on the same flight.<br>
-&bull; Welcome Drinks and Fruit basket.<br>
-&bull; Wireless internet access.<br>
-&bull; Turndown Service<br>
-&bull; Gated community with 24-hour estate security.<br>
-&bull; A team of full-time staff at your service including a villa manager, chef, housekeepers.<br>
-&bull; Our chef will do all of your grocery shopping and prepare your meals. (Please note there is 25% of grocery cost as handling fee - subject to 7% VAT).<br>
-&bull; Guest Experience services<br><br>
+<b><u>Inclusions:</u></b>
+<ul style="margin: 8px 0 12px 20px; padding-left: 20px;">
+<li>Exclusive use of Villa Roxo*</li>
+<li>Taxes and Service Charges</li>
+<li>Daily American Breakfast between 7AM to 11AM.</li>
+<li>Two-way Airport Transfer on the same flight.</li>
+<li>Welcome Drinks and Fruit basket.</li>
+<li>Wireless internet access.</li>
+<li>Turndown Service</li>
+<li>Gated community with 24-hour estate security.</li>
+<li>A team of full-time staff at your service including a villa manager, chef, housekeepers.</li>
+<li>Our chef will do all of your grocery shopping and prepare your meals. (Please note there is 25% of grocery cost as handling fee - subject to 7% VAT).</li>
+<li>Guest Experience services</li>
+</ul>
 <b>Villa Features:</b> Beach Access, 18 Meters Infinity Pool, TV Room with Xbox, BBQ Area, Mahjong Table, Bicycles, Foosball Table, Ping Pong Table, Giant Chess Set, Kayak and Paddle Board, Estate Gym...<br><br>
 <b>Location:</b> Natai Beach is located in Phang Nga Province on the southern mainland of Thailand, about 20–25 minutes (approx. 27 km) from Phuket International Airport.<br><br>
 Note that a refundable security deposit of US$ 1,500 is required in any currency and may be paid via Credit Card or Bank transfer 2 days before arrival.`,
 
  "villaaqua": `<b><a href="https://aquaphuket.com/" target="_blank">Villa Aqua</a>, Natai Beach, Phuket</b><br><br>
 <b>{nightlyRateText}</b><br><br>
-<b>Inclusions:</b><br><br>
-&bull; Exclusive use of Villa Aqua*<br>
-&bull; Taxes and Service Charges<br>
-&bull; Daily American Breakfast between 7AM to 11AM<br>
-&bull; Two way Airport Transfer on the same flight.<br>
-&bull; Welcome drink and fruit basket.<br>
-&bull; Turndown Service.<br>
-&bull; Wireless internet access.<br>
-&bull; Gated community with 24-hour estate security.<br>
-&bull; A team of full-time staff at your service including a villa manager, chef, housekeepers<br>
-&bull; Our chef will do all of your grocery shopping and prepare your meals. (Please note there is 25% of grocery cost as handling fee - subject to 7% VAT).<br>
-&bull; Guest Experience service<br><br>
+<b><u>Inclusions:</u></b>
+<ul style="margin: 8px 0 12px 20px; padding-left: 20px;">
+<li>Exclusive use of Villa Aqua*</li>
+<li>Taxes and Service Charges</li>
+<li>Daily American Breakfast between 7AM to 11AM</li>
+<li>Two way Airport Transfer on the same flight.</li>
+<li>Welcome drink and fruit basket.</li>
+<li>Turndown Service.</li>
+<li>Wireless internet access.</li>
+<li>Gated community with 24-hour estate security.</li>
+<li>A team of full-time staff at your service including a villa manager, chef, housekeepers</li>
+<li>Our chef will do all of your grocery shopping and prepare your meals. (Please note there is 25% of grocery cost as handling fee - subject to 7% VAT).</li>
+<li>Guest Experience service</li>
+</ul>
 <b>Villa Features:</b> Beach access, Infinity pool, Spa with Sauna, Steam Room and Plunge Pool, Games Room with TV, Foosball and Ping Pong Table, BBQ + Pizza Oven area, Kayak and Paddle Board, Bicycles, Board Games, Office Area, Estate Gym.<br><br>
 <b>Location:</b> Natai Beach is located in Phang Nga Province on the southern mainland of Thailand, about 20–25 minutes (approx. 27 km) from Phuket International Airport.<br><br>
 Note that a refundable security deposit of US$ 1,500 is required in any currency and may be paid via Credit Card or Bank transfer 2 days before arrival.`,
 
  "villaamarapura": `<b><a href="https://www.amarapuraphuket.com/" target="_blank">Villa Amarapura</a>, Cape Yamu, East Coast, Phuket</b><br><br>
 <b>{nightlyRateText}</b><br><br>
-<b>Inclusions:</b><br><br>
-&bull; Exclusive use of Villa Amarapura*<br>
-&bull; Taxes and Service Charges<br>
-&bull; Two-way airport transfers on same flight.<br>
-&bull; Welcome drink and cold towel, and fruit baskets on arrival.<br>
-&bull; Wireless internet access.<br>
-&bull; Turndown Service.<br>
-&bull; A team of full-time staff at your service including a villa manager, chef, housekeepers.<br>
-&bull; Our chef will do all of your grocery shopping and prepare your meals. (Please note there is 20% of grocery cost as handling fee - subject to 7% VAT).<br>
-&bull; Guest Experience services<br><br>
+<b><u>Inclusions:</u></b>
+<ul style="margin: 8px 0 12px 20px; padding-left: 20px;">
+<li>Exclusive use of Villa Amarapura*</li>
+<li>Taxes and Service Charges</li>
+<li>Two-way airport transfers on same flight.</li>
+<li>Welcome drink and cold towel, and fruit baskets on arrival.</li>
+<li>Wireless internet access.</li>
+<li>Turndown Service.</li>
+<li>A team of full-time staff at your service including a villa manager, chef, housekeepers.</li>
+<li>Our chef will do all of your grocery shopping and prepare your meals. (Please note there is 20% of grocery cost as handling fee - subject to 7% VAT).</li>
+<li>Guest Experience services</li>
+</ul>
 <b>Villa Features:</b> A 25 Meters infinity Pool, Beachfront, Fitness Room, Game room, Golf Green, Cinema Room with large screen projector, Indoor & Outdoor Lounging Areas, Outdoor Sala, Garden, Basketball / Badminton Court, Trampoline (upon request).<br><br>
 Note that a refundable security deposit of US$ 5,000 is required in any currency, and may be paid via Credit Card 2 days before arrival.<br><br>
 <span style="color:#ff0000; font-style:italic;">** For accredited agencies, commission for Reserve Villas is subject to a maximum cap of 10% and cannot be extended beyond this rate.</span>`,
 
  "villaamaravida": `<b><a href="https://www.amaravidaphuket.com/" target="_blank">Villa Amaravida</a>, Cape Yamu, East Coast, Phuket</b><br><br>
 <b>{nightlyRateText}</b><br><br>
-<b>Inclusions:</b><br><br>
-&bull; Exclusive use of Villa Amaravida*<br>
-&bull; Taxes and Service Charges<br>
-&bull; Two-way airport transfers on same flight.<br>
-&bull; Welcome drink and cold towel, and fruit baskets on arrival.<br>
-&bull; Wireless internet access.<br>
-&bull; Turndown Service.<br>
-&bull; A team of full-time staff at your service including a villa manager, chef, housekeepers.<br>
-&bull; Our chef will do all of your grocery shopping and prepare your meals. (Please note there is 20% of grocery cost as handling fee - subject to 7% VAT).<br>
-&bull; Guest Experience services<br><br>
+<b><u>Inclusions:</u></b>
+<ul style="margin: 8px 0 12px 20px; padding-left: 20px;">
+<li>Exclusive use of Villa Amaravida*</li>
+<li>Taxes and Service Charges</li>
+<li>Two-way airport transfers on same flight.</li>
+<li>Welcome drink and cold towel, and fruit baskets on arrival.</li>
+<li>Wireless internet access.</li>
+<li>Turndown Service.</li>
+<li>A team of full-time staff at your service including a villa manager, chef, housekeepers.</li>
+<li>Our chef will do all of your grocery shopping and prepare your meals. (Please note there is 20% of grocery cost as handling fee - subject to 7% VAT).</li>
+<li>Guest Experience services</li>
+</ul>
 <b>Villa Features:</b> Three infinity Pool, Two large Jacuzzi, Beachfront, Fitness Room, Spa Room with Steam, Sauna, Game room, Tennis Court and Basketball Court, Indoor & Outdoor Lounging Areas, Outdoor Sala, Garden Play area, Playground with Rock Climbing, Entertainment Room with Golf Simulator, Pool Table, Foosball Table, Swing, Ping Pong Table, Squash Court, Wine Cellar, Kayak and Paddle Board, Trampoline (upon request).<br><br>
 Note that a refundable security deposit of US$ 5,000 is required in any currency, and may be paid via Credit Card 2 days before arrival.<br><br>
 <span style="color:#ff0000; font-style:italic;">** For accredited agencies, commission for Reserve Villas is subject to a maximum cap of 10% and cannot be extended beyond this rate.</span>`,
 
  "villaamarasara": `<b><a href="https://www.amarasaraphuket.com/" target="_blank">Villa Amarasara</a>, Cape Yamu, East Coast, Phuket</b><br><br>
 <b>{nightlyRateText}</b><br><br>
-<b>Inclusions:</b><br><br>
-&bull; Exclusive use of Villa Amarasara*<br>
-&bull; Taxes and Service Charges<br>
-&bull; Two-way airport transfers on the same flight<br>
-&bull; Welcome drink and cold towel, and fruit baskets on arrival.<br>
-&bull; Wireless internet access.<br>
-&bull; Turndown Service.<br>
-&bull; A team of full-time staff at your service including a villa manager, private chef, housekeepers.<br>
-&bull; Our chef will do all of your grocery shopping and prepare your meals. (Please note there is 20% of grocery cost as handling fee - subject to 7% VAT).<br>
-&bull; Guest Experience services<br><br>
+<b><u>Inclusions:</u></b>
+<ul style="margin: 8px 0 12px 20px; padding-left: 20px;">
+<li>Exclusive use of Villa Amarasara*</li>
+<li>Taxes and Service Charges</li>
+<li>Two-way airport transfers on the same flight</li>
+<li>Welcome drink and cold towel, and fruit baskets on arrival.</li>
+<li>Wireless internet access.</li>
+<li>Turndown Service.</li>
+<li>A team of full-time staff at your service including a villa manager, private chef, housekeepers.</li>
+<li>Our chef will do all of your grocery shopping and prepare your meals. (Please note there is 20% of grocery cost as handling fee - subject to 7% VAT).</li>
+<li>Guest Experience services</li>
+</ul>
 <b>Villa Features:</b> Beachfront, Olympic size Infinity Pool, Children's Pool, Fully equipped gym, Indoor basketball court, Private tennis court, Golf simulator, Sauna and steam room, Cinema, Jacuzzi, Garden Play area, Game Room with Pool Table, Foosball Table, Board Games, Rooftop bar, Kayak and Paddle boards.<br><br>
 Note that a refundable security deposit of US$ 5,000 is required in any currency, and may be paid via Credit Card 2 days before arrival.<br><br>
 <span style="color:#ff0000; font-style:italic;">** For accredited agencies, commission for Reserve Villas is subject to a maximum cap of 10% and cannot be extended beyond this rate.</span>`,
 
  "villaanalaya": `<b><a href="https://www.analayaphuket.com/" target="_blank">Villa Analaya</a>, Kamala, West Coast, Phuket</b><br><br>
 <b>{nightlyRateText}</b><br><br>
-<b>Inclusions:</b><br><br>
-&bull; Exclusive use of Villa Analaya*<br>
-&bull; Taxes and service charges<br>
-&bull; Two-way airport transfers on same flight.<br>
-&bull; Welcome drink and cold towel, and fruit baskets on arrival.<br>
-&bull; Wireless internet access.<br>
-&bull; Turndown Service.<br>
-&bull; A team of full-time staff at your service including a villa manager, chef, housekeepers.<br>
-&bull; Our chef will do all of your grocery shopping and prepare your meals. (Please note there is 20% of grocery cost as handling fee - subject to 7% VAT).<br>
-&bull; Guest Experience services<br><br>
+<b><u>Inclusions:</u></b>
+<ul style="margin: 8px 0 12px 20px; padding-left: 20px;">
+<li>Exclusive use of Villa Analaya*</li>
+<li>Taxes and service charges</li>
+<li>Two-way airport transfers on same flight.</li>
+<li>Welcome drink and cold towel, and fruit baskets on arrival.</li>
+<li>Wireless internet access.</li>
+<li>Turndown Service.</li>
+<li>A team of full-time staff at your service including a villa manager, chef, housekeepers.</li>
+<li>Our chef will do all of your grocery shopping and prepare your meals. (Please note there is 20% of grocery cost as handling fee - subject to 7% VAT).</li>
+<li>Guest Experience services</li>
+</ul>
 <b>Villa Features:</b> Infinity Pool, Beachfront property, Garden, Fitness room, Yoga Platform, Sala, Sound System, BBQ Facilities, Ping Pong Table, Kayaks, Stairlift (Wheelchair Friendly) and Pool Table.<br><br>
 Note that a refundable security deposit of US$ 2,500 is required in any currency, and may be paid via Credit Card 2 days before arrival.`,
 
  "villapurissara": `<b><a href="https://www.purissaraphuket.com/" target="_blank">Villa Purissara</a>, Kamala, West Coast, Phuket</b><br><br>
 <b>{nightlyRateText}</b><br><br>
-<b>Inclusions:</b><br><br>
-&bull; Exclusive use of Villa Purissara*<br>
-&bull; Taxes and Service Charges<br>
-&bull; Two-way airport transfers on same flight.<br>
-&bull; Welcome drink and cold towel, and fruit baskets on arrival.<br>
-&bull; Wireless internet access.<br>
-&bull; Turndown Service.<br>
-&bull; A team of full-time staff at your service including a villa manager, chef, housekeepers.<br>
-&bull; Our chef will do all of your grocery shopping and prepare your meals. (Please note there is 20% of grocery cost as handling fee - subject to 7% VAT).<br>
-&bull; Guest Experience services<br><br>
+<b><u>Inclusions:</u></b>
+<ul style="margin: 8px 0 12px 20px; padding-left: 20px;">
+<li>Exclusive use of Villa Purissara*</li>
+<li>Taxes and Service Charges</li>
+<li>Two-way airport transfers on same flight.</li>
+<li>Welcome drink and cold towel, and fruit baskets on arrival.</li>
+<li>Wireless internet access.</li>
+<li>Turndown Service.</li>
+<li>A team of full-time staff at your service including a villa manager, chef, housekeepers.</li>
+<li>Our chef will do all of your grocery shopping and prepare your meals. (Please note there is 20% of grocery cost as handling fee - subject to 7% VAT).</li>
+<li>Guest Experience services</li>
+</ul>
 <b>Villa Features:</b> *Beachfront property with Direct Access to the Beach, Extensive Outdoor Terracing with Beach and Sea view, Outdoor Bar and Lounge, Pool Table, Spa Room, Kayaks…<br><br>
 Note that a refundable security deposit of US$ 2,500 is required in any currency, and may be paid via Credit Card 2 days before arrival.`,
 
  "villazai": `<b><a href="https://www.zaiphuket.com/" target="_blank">Villa Zai</a>, Kata Beach, West Coast, Phuket</b><br><br>
 <b>{nightlyRateText}</b><br><br>
-<b>Inclusions:</b><br><br>
-&bull; Exclusive use of Villa Zai*<br>
-&bull; Taxes & Services Charge<br>
-&bull; Two-way airport transfers on the same flight.<br>
-&bull; Welcome drink and cold towel, and fruit baskets on arrival.<br>
-&bull; Wireless internet access.<br>
-&bull; Turndown Service.<br>
-&bull; A team of full-time staff at your service including a villa manager, chefs housekeepers.<br>
-&bull; Our chef will do all of your grocery shopping and prepare your meals. (Please note there is 20% of grocery cost as handling fee - subject to 7% VAT).<br>
-&bull; Guest Experience services<br><br>
+<b><u>Inclusions:</u></b>
+<ul style="margin: 8px 0 12px 20px; padding-left: 20px;">
+<li>Exclusive use of Villa Zai*</li>
+<li>Taxes & Services Charge</li>
+<li>Two-way airport transfers on the same flight.</li>
+<li>Welcome drink and cold towel, and fruit baskets on arrival.</li>
+<li>Wireless internet access.</li>
+<li>Turndown Service.</li>
+<li>A team of full-time staff at your service including a villa manager, chefs housekeepers.</li>
+<li>Our chef will do all of your grocery shopping and prepare your meals. (Please note there is 20% of grocery cost as handling fee - subject to 7% VAT).</li>
+<li>Guest Experience services</li>
+</ul>
 <b>Villa Features:</b> *Panoramic Sea and Sunset view, Infinity Swimming Pool, Large Sundeck, Pickle Ball Court and Putting Green, Fitness, Spa with steam room, Bar, Wine Cellar, Game room with Poker Table, Cinema room, Karaoke, Pool table, Ping Pong Table, Jacuzzi, Large Roof Top…<br><br>
 Note that a refundable security deposit of US$5,000 is required in any currency, and may be paid via Credit Card 2 days before arrival.<br><br>
 <span style="color:#ff0000; font-style:italic;">** For accredited agencies, commission for Reserve Villas is subject to a maximum cap of 10% and cannot be extended beyond this rate.</span>`,
 
  "villaoceans11": `<b><a href="https://www.oceans11villa.com/" target="_blank">Villa Ocean's 11</a>, Cape Yamu, East Coast, Phuket.</b><br><br>
 <b>{nightlyRateText}</b><br><br>
-<b>Inclusions:</b><br><br>
-&bull; Exclusive use of Villa Ocean's 11*<br>
-&bull; Taxes and Service Charges<br>
-&bull; Two-way airport transfers on same flight.<br>
-&bull; Welcome drink and cold towel, and fruit baskets on arrival.<br>
-&bull; Wireless internet access.<br>
-&bull; A team of full-time staff at your service including a chef and housekeepers.<br>
-&bull; Our chef will do all of your grocery shopping and prepare your meals. (Please note there is 20% of grocery cost as handling fee - subject to 7% VAT).<br>
-&bull; Turndown Service<br>
-&bull; Guest Experience service<br><br>
+<b><u>Inclusions:</u></b>
+<ul style="margin: 8px 0 12px 20px; padding-left: 20px;">
+<li>Exclusive use of Villa Ocean's 11*</li>
+<li>Taxes and Service Charges</li>
+<li>Two-way airport transfers on same flight.</li>
+<li>Welcome drink and cold towel, and fruit baskets on arrival.</li>
+<li>Wireless internet access.</li>
+<li>A team of full-time staff at your service including a chef and housekeepers.</li>
+<li>Our chef will do all of your grocery shopping and prepare your meals. (Please note there is 20% of grocery cost as handling fee - subject to 7% VAT).</li>
+<li>Turndown Service</li>
+<li>Guest Experience service</li>
+</ul>
 <b>Villa Features:</b> *Expansive Infinity Swimming Pool, Access to the beach, Home Cinema, Fitness Room, Dedicated Spa Room, Sunrise view, TV in All Bedrooms, Poolside Sala, Bar and Lounge...<br><br>
 Note that a refundable security deposit of US$ 2,500 is required in any currency payable by cash or credit card prior to check-in.`,
 
  "villaaye": `<b><a href="https://www.villaaye.com/" target="_blank">Villa Aye</a>, Millionaire's Mile Kamala, West Coast, Phuket</b><br><br>
 <b>{nightlyRateText}</b><br><br>
-<b>Inclusions:</b><br><br>
-&bull; Exclusive use of Villa Aye*<br>
-&bull; Taxes and Service Charges<br>
-&bull; Two-way airport transfers on same flight<br>
-&bull; Welcome drink and cold towel, and fruit basket on arrival<br>
-&bull; Wireless internet access.<br>
-&bull; Turndown Service.<br>
-&bull; A team of full-time staff at your service including a villa manager, chef, housekeepers.<br>
-&bull; Our chef will do all of your grocery shopping and prepare your meals. (Please note there is 20% of grocery cost as handling fee - subject to 7% VAT).<br>
-&bull; Guest Experience services<br><br>
+<b><u>Inclusions:</u></b>
+<ul style="margin: 8px 0 12px 20px; padding-left: 20px;">
+<li>Exclusive use of Villa Aye*</li>
+<li>Taxes and Service Charges</li>
+<li>Two-way airport transfers on same flight</li>
+<li>Welcome drink and cold towel, and fruit basket on arrival</li>
+<li>Wireless internet access.</li>
+<li>Turndown Service.</li>
+<li>A team of full-time staff at your service including a villa manager, chef, housekeepers.</li>
+<li>Our chef will do all of your grocery shopping and prepare your meals. (Please note there is 20% of grocery cost as handling fee - subject to 7% VAT).</li>
+<li>Guest Experience services</li>
+</ul>
 <b>Villa Features:</b> Ocean & Sunset View with large Infinity Pool, Elevator (wheelchair-friendly), Fitness Room, Media and Games Room, Pool Table, Ping Pong Table, Large Garden, Indoor & Outdoor Dining possibility<br><br>
 Note that a refundable security deposit of US$ 2,500 is required in any currency, and may be paid via Credit Card 2 days before arrival.`,
 
  "villachelay": `<b><a href="https://www.chelayphuket.com/" target="_blank">Villa Chelay</a>, Millionaire's Mile Kamala, West Coast, Phuket</b><br><br>
 <b>{nightlyRateText}</b><br><br>
-<b>Inclusions:</b><br><br>
-&bull; Exclusive use of Villa Chelay*<br>
-&bull; Taxes & Services Charge<br>
-&bull; Two-way airport transfers on the same flight.<br>
-&bull; Welcome drink, cold towel, and fruit basket on arrival.<br>
-&bull; Wireless internet access.<br>
-&bull; Turndown Service.<br>
-&bull; A team of full-time staff at your service including a villa manager, chef, housekeepers.<br>
-&bull; Our chef will do all of your grocery shopping and prepare your meals. (Please note there is 20% of grocery cost as handling fee - subject to 7% VAT).<br>
-&bull; Turnover Service<br>
-&bull; Guest Experience services<br><br>
+<b><u>Inclusions:</u></b>
+<ul style="margin: 8px 0 12px 20px; padding-left: 20px;">
+<li>Exclusive use of Villa Chelay*</li>
+<li>Taxes & Services Charge</li>
+<li>Two-way airport transfers on the same flight.</li>
+<li>Welcome drink, cold towel, and fruit basket on arrival.</li>
+<li>Wireless internet access.</li>
+<li>Turndown Service.</li>
+<li>A team of full-time staff at your service including a villa manager, chef, housekeepers.</li>
+<li>Our chef will do all of your grocery shopping and prepare your meals. (Please note there is 20% of grocery cost as handling fee - subject to 7% VAT).</li>
+<li>Turnover Service</li>
+<li>Guest Experience services</li>
+</ul>
 <b>Villa Features:</b> Access to Ocean, Sunset and Patong Beach view, Infinity Pool, Spa Room, Entertainment Room, Foosball and Ping Pong Table...<br><br>
 Note that a refundable security deposit of US$ 2,500 is required in any currency, and may be paid via Credit Card 2 days before arrival.`,
 
  "villaparadiso": `<b><a href="https://www.villaparadisophuket.com/" target="_blank">Villa Paradiso</a>, Nai Thon Beach, Phuket</b><br><br>
 <b>{nightlyRateText}</b><br><br>
-<b>Inclusions:</b><br><br>
-&bull; Exclusive use of Villa Paradiso*<br>
-&bull; Taxes and Service Charges<br>
-&bull; Two-way airport transfers on same flight<br>
-&bull; Welcome drink and cold towel, and fruit baskets on arrival.<br>
-&bull; Wireless internet access.<br>
-&bull; Turndown Service.<br>
-&bull; A team of full-time staff at your service including a villa manager, chef, housekeeper.<br>
-&bull; Our chef will do all of your grocery shopping and prepare your meals. (Please note there is 20% of grocery cost as handling fee - subject to 7% VAT).<br>
-&bull; Guest Experience services<br><br>
+<b><u>Inclusions:</u></b>
+<ul style="margin: 8px 0 12px 20px; padding-left: 20px;">
+<li>Exclusive use of Villa Paradiso*</li>
+<li>Taxes and Service Charges</li>
+<li>Two-way airport transfers on same flight</li>
+<li>Welcome drink and cold towel, and fruit baskets on arrival.</li>
+<li>Wireless internet access.</li>
+<li>Turndown Service.</li>
+<li>A team of full-time staff at your service including a villa manager, chef, housekeeper.</li>
+<li>Our chef will do all of your grocery shopping and prepare your meals. (Please note there is 20% of grocery cost as handling fee - subject to 7% VAT).</li>
+<li>Guest Experience services</li>
+</ul>
 <b>Villa Features:</b> *An Infinity Pool with Spectacular Ocean & Sunset View, Media and Game room with Boardgames and Mahjong Table, Office Room, Piano, Fitness and Spa room.<br><br>
 Note that a refundable security deposit of US$ 2,500 is required in any currency, and may be paid via Credit Card 2 days before arrival.`,
 
  "villaleelawadee": `<b><a href="https://www.villaleelawadee.com/" target="_blank">Villa Leelawadee</a>, Ao Po, East Coast, Phuket</b><br><br>
 <b>{nightlyRateText}</b><br><br>
-<b>Inclusions:</b><br><br>
-&bull; Exclusive use of Villa Leelawadee*<br>
-&bull; Taxes and Service Charges<br>
-&bull; Two-way airport transfers on same flight<br>
-&bull; Welcome drink, cold towel and fruit basket on arrival.<br>
-&bull; Wireless internet access.<br>
-&bull; Turndown Service.<br>
-&bull; A team of full-time staff at your service including a villa manager, chef, housekeepers.<br>
-&bull; Our chef will do all of your grocery shopping and prepare your meals. (Please note there is 20% of grocery cost as handling fee - subject to 7% VAT).<br>
-&bull; Guest Experience services<br><br>
+<b><u>Inclusions:</u></b>
+<ul style="margin: 8px 0 12px 20px; padding-left: 20px;">
+<li>Exclusive use of Villa Leelawadee*</li>
+<li>Taxes and Service Charges</li>
+<li>Two-way airport transfers on same flight</li>
+<li>Welcome drink, cold towel and fruit basket on arrival.</li>
+<li>Wireless internet access.</li>
+<li>Turndown Service.</li>
+<li>A team of full-time staff at your service including a villa manager, chef, housekeepers.</li>
+<li>Our chef will do all of your grocery shopping and prepare your meals. (Please note there is 20% of grocery cost as handling fee - subject to 7% VAT).</li>
+<li>Guest Experience services</li>
+</ul>
 <b>Villa Features:</b> *An Infinity Pool with Spectacular Ocean View, Ping Pong Table, Indoor Pickleball Court, Muay Thai Workout Area, Basketball Hoop, Indoor & Outdoor Lounging Area.<br><br>
 <b>Terms:</b> Note that a refundable security deposit of US$ 1,000 is required in any currency and may be paid by Credit Card 2 days before arrival.`,
 
  "villavarya": `<b><a href="https://www.varyaphuket.com/" target="_blank">Villa Varya</a>, Millionaire's Mile Kamala, West Coast, Phuket</b><br><br>
 <b>{nightlyRateText}</b><br><br>
-<b>Inclusions:</b><br><br>
-&bull; Exclusive use of Villa Varya*<br>
-&bull; Taxes and Service Charges<br>
-&bull; Two-way airport transfers on the same flight.<br>
-&bull; Daily Continental or Asian Breakfast between 7AM to 11AM<br>
-&bull; Welcome drink and cold towel, and fruit baskets on arrival.<br>
-&bull; Wireless internet access.<br>
-&bull; A team of full-time staff at your service including a chef and housekeepers.<br>
-&bull; Our chef will do all of your grocery shopping and prepare your meals. (Please note there is 20% of grocery cost as handling fee - subject to 7% VAT).<br>
-&bull; Guest Experience service<br><br>
+<b><u>Inclusions:</u></b>
+<ul style="margin: 8px 0 12px 20px; padding-left: 20px;">
+<li>Exclusive use of Villa Varya*</li>
+<li>Taxes and Service Charges</li>
+<li>Two-way airport transfers on the same flight.</li>
+<li>Daily Continental or Asian Breakfast between 7AM to 11AM</li>
+<li>Welcome drink and cold towel, and fruit baskets on arrival.</li>
+<li>Wireless internet access.</li>
+<li>A team of full-time staff at your service including a chef and housekeepers.</li>
+<li>Our chef will do all of your grocery shopping and prepare your meals. (Please note there is 20% of grocery cost as handling fee - subject to 7% VAT).</li>
+<li>Guest Experience service</li>
+</ul>
 <b>Villa Features:</b> Four Swimming pools, Media Room with Karaoke System, Open-air Spa Area, Gym, Pool table, Steam Room in Master Bedroom, BBQ facilities, Access to Estate Pickleball Court...<br><br>
 <b>Terms:</b> Note that a refundable security deposit of US$ 2,500 is required in any currency payable by cash or credit card prior to check-in`,
 
  "villaromtrai": `<b><a href="https://www.samsaraphuket.com/villa/rom-trai/" target="_blank">Villa Rom Trai</a>, Kamala, West Coast, Phuket</b><br><br>
 <b>{nightlyRateText}</b><br><br>
-<b>Inclusions:</b><br><br>
-&bull; Exclusive use of Villa Rom Trai*<br>
-&bull; Taxes and Service Charges<br>
-&bull; Two-way airport transfers on same flight.<br>
-&bull; Welcome drink and cold towel, and fruit baskets on arrival.<br>
-&bull; Wireless internet access.<br>
-&bull; A team of full-time staff at your service including a chef and housekeepers.<br>
-&bull; Our chef will do all of your grocery shopping and prepare your meals. (Please note there is 20% of grocery cost as handling fee - subject to 7% VAT).<br>
-&bull; Turndown Service<br>
-&bull; Guest Experience service<br><br>
+<b><u>Inclusions:</u></b>
+<ul style="margin: 8px 0 12px 20px; padding-left: 20px;">
+<li>Exclusive use of Villa Rom Trai*</li>
+<li>Taxes and Service Charges</li>
+<li>Two-way airport transfers on same flight.</li>
+<li>Welcome drink and cold towel, and fruit baskets on arrival.</li>
+<li>Wireless internet access.</li>
+<li>A team of full-time staff at your service including a chef and housekeepers.</li>
+<li>Our chef will do all of your grocery shopping and prepare your meals. (Please note there is 20% of grocery cost as handling fee - subject to 7% VAT).</li>
+<li>Turndown Service</li>
+<li>Guest Experience service</li>
+</ul>
 <b>Villa Features:</b> *12-meter infinity-edge private pool, In-house Elevator that Services All Floors, Sauna and Steam Rooms, Jacuzzi in Master Bedroom, Outdoor Dining with Sunset View.<br><br>
 <b>Terms:</b> Note that a refundable security deposit of US$ 1,500 is required in any currency payable by cash or credit card prior to check-in.`,
 
  "villaviman": `<b><a href="https://www.samsaraphuket.com/villa/viman/" target="_blank">Villa Viman</a>, Kamala, West Coast, Phuket</b><br><br>
 <b>{nightlyRateText}</b><br><br>
-<b>Inclusions:</b><br><br>
-&bull; Exclusive use of Villa Viman*<br>
-&bull; Taxes and Service Charges<br>
-&bull; Two-way airport transfers on same flight.<br>
-&bull; Welcome drink and cold towel, and fruit baskets on arrival.<br>
-&bull; Wireless internet access.<br>
-&bull; A team of full-time staff at your service including a chef and housekeepers.<br>
-&bull; Our chef will do all of your grocery shopping and prepare your meals. (Please note there is 20% of grocery cost as handling fee - subject to 7% VAT).<br>
-&bull; Guest Experience service<br><br>
+<b><u>Inclusions:</u></b>
+<ul style="margin: 8px 0 12px 20px; padding-left: 20px;">
+<li>Exclusive use of Villa Viman*</li>
+<li>Taxes and Service Charges</li>
+<li>Two-way airport transfers on same flight.</li>
+<li>Welcome drink and cold towel, and fruit baskets on arrival.</li>
+<li>Wireless internet access.</li>
+<li>A team of full-time staff at your service including a chef and housekeepers.</li>
+<li>Our chef will do all of your grocery shopping and prepare your meals. (Please note there is 20% of grocery cost as handling fee - subject to 7% VAT).</li>
+<li>Guest Experience service</li>
+</ul>
 <b>Villa Features:</b> Infinity Pool, Outdoor Jacuzzi, Ping pong, Foosball Table, Theater room, spacious indoor and outdoor lounge.<br><br>
 <b>Terms:</b> Note that a refundable security deposit of US$ 1,500 is required in any currency payable by cash or credit card prior to check-in.`,
 
  "villahalemalia": `<b><a href="https://www.samsaraphuket.com/villa/hale-malia/" target="_blank">Villa Hale Malia</a>, Kamala area, West Coast, Phuket</b><br><br>
 <b>{nightlyRateText}</b><br><br>
-<b>Inclusions:</b><br><br>
-&bull; Exclusive use of Villa Hale Malia*<br>
-&bull; Taxes and Service Charges<br>
-&bull; Two-way airport transfers on same flight.<br>
-&bull; Welcome drink and cold towel, and fruit baskets on arrival.<br>
-&bull; Wireless internet access.<br>
-&bull; Turndown Service<br>
-&bull; A team of full-time staff at your service including a chef and housekeepers.<br>
-&bull; Our chef will do all of your grocery shopping and prepare your meals. (Please note there is 20% of grocery cost as handling fee - subject to 7% VAT).<br>
-&bull; Guest Experience service<br><br>
+<b><u>Inclusions:</u></b>
+<ul style="margin: 8px 0 12px 20px; padding-left: 20px;">
+<li>Exclusive use of Villa Hale Malia*</li>
+<li>Taxes and Service Charges</li>
+<li>Two-way airport transfers on same flight.</li>
+<li>Welcome drink and cold towel, and fruit baskets on arrival.</li>
+<li>Wireless internet access.</li>
+<li>Turndown Service</li>
+<li>A team of full-time staff at your service including a chef and housekeepers.</li>
+<li>Our chef will do all of your grocery shopping and prepare your meals. (Please note there is 20% of grocery cost as handling fee - subject to 7% VAT).</li>
+<li>Guest Experience service</li>
+</ul>
 <b>Villa Features:</b> *Ocean and Sunset view, Infinity Swimming Pool, Outdoor Thai Sala with overlooking view of Naka Lay Bay, Study Room, Ping Pong table Sauna and Steam Room.<br><br>
 <b>Terms:</b> Note that a refundable security deposit of US$ 1,500 is required in any currency payable by cash or credit card prior to check-in.`,
 
@@ -2658,304 +2702,342 @@ Note that a refundable security deposit of US$ 2,500 is required in any currency
 <span style="color:#0000ee; font-style:italic;">As transparency to all guests, we wish to manage expectations that there is an ongoing construction next to Villa Lomchoy and we are pleased to offer this special rate which is 20% discount from the normal price. However, noise is asked to be kept minimal whenever the villa is occupied to avoid inconvenience. The work stops around 5pm and is on hold the whole day during Sundays.</span><br><br>
 <span style="color:#ff0000; font-weight:bold;">NOTE FOR RES - For Peak Season 2026 (19 December 2026 until 09 January 2027):</span><br>
 <span style="color:#0000ee; font-style:italic;">As transparency to all guests, we wish to manage expectations that there is an ongoing construction next to Villa Lomchoy. As a result, some construction elements may be visible from the side of the villa. However, to ensure a peaceful and enjoyable holiday experience, all construction will be paused during the Christmas and New Year season.</span><br><br>
-<b>Inclusions:</b><br><br>
-&bull; Exclusive use of Villa Lomchoy*<br>
-&bull; Taxes and Service Charges<br>
-&bull; Two-way airport transfers on same flight.<br>
-&bull; Welcome drink, cold towel and fruit baskets on arrival.<br>
-&bull; Wireless internet access.<br>
-&bull; A team of full-time staff at your service including a chef and housekeepers.<br>
-&bull; Our chef will do all of your grocery shopping and prepare your meals. (Please note there is 20% of grocery cost as handling fee - subject to 7% VAT).<br>
-&bull; Turndown Service<br>
-&bull; Guest Experience service<br><br>
+<b><u>Inclusions:</u></b>
+<ul style="margin: 8px 0 12px 20px; padding-left: 20px;">
+<li>Exclusive use of Villa Lomchoy*</li>
+<li>Taxes and Service Charges</li>
+<li>Two-way airport transfers on same flight.</li>
+<li>Welcome drink, cold towel and fruit baskets on arrival.</li>
+<li>Wireless internet access.</li>
+<li>A team of full-time staff at your service including a chef and housekeepers.</li>
+<li>Our chef will do all of your grocery shopping and prepare your meals. (Please note there is 20% of grocery cost as handling fee - subject to 7% VAT).</li>
+<li>Turndown Service</li>
+<li>Guest Experience service</li>
+</ul>
 <b>Villa Features:</b> A 14-meter Infinity-Edge Private Pool, Outdoor Whirlpool, Outdoor Barbecue and Alfresco Dining Table with Views, TV Room.<br><br>
 <b>Terms:</b> Note that a refundable security deposit of US$ 1,500 is required in any currency payable by cash or credit card prior to check-in.`,
 
  "villasaengootsa": `<b><a href="https://www.samsaraphuket.com/villa/saengootsa/" target="_blank">Villa Saengootsa</a>, Kamala area, West Coast, Phuket</b><br><br>
 <b>{nightlyRateText}</b><br><br>
-<b>Inclusions:</b><br><br>
-&bull; Exclusive use of Villa Saengootsa*<br>
-&bull; Taxes and Service Charges<br>
-&bull; Two-way airport transfers on same flight.<br>
-&bull; Welcome drink and cold towel, and fruit baskets on arrival.<br>
-&bull; Wireless Internet access.<br>
-&bull; A team of full-time staff at your service including a chef and housekeepers.<br>
-&bull; Our chef will do all of your grocery shopping and prepare your meals. (Please note there is 20% of grocery cost as handling fee - subject to 7% VAT).<br>
-&bull; Turndown Service<br>
-&bull; Guest Experience service<br><br>
+<b><u>Inclusions:</u></b>
+<ul style="margin: 8px 0 12px 20px; padding-left: 20px;">
+<li>Exclusive use of Villa Saengootsa*</li>
+<li>Taxes and Service Charges</li>
+<li>Two-way airport transfers on same flight.</li>
+<li>Welcome drink and cold towel, and fruit baskets on arrival.</li>
+<li>Wireless Internet access.</li>
+<li>A team of full-time staff at your service including a chef and housekeepers.</li>
+<li>Our chef will do all of your grocery shopping and prepare your meals. (Please note there is 20% of grocery cost as handling fee - subject to 7% VAT).</li>
+<li>Turndown Service</li>
+<li>Guest Experience service</li>
+</ul>
 <b>Villa Features:</b> *15-meter Infinity-edge Private Pool, Outdoor Bathtub, Games Room with Built-in Bar and Pool Table, Media Area, Outdoor BBQ with Shaded Al Fresco Dining Area.<br><br>
 <b>Terms:</b> Note that a refundable security deposit of US$ 1,500 is required in any currency payable by cash or credit card prior to check-in.`,
 
  "villafahsai": `<b><a href="https://www.samsaraphuket.com/villa/fah-sai/" target="_blank">Villa Fah Sai</a>, Kamala area, West Coast, Phuket</b><br><br>
 <span style="color:#ff0000; font-weight:bold;">NOTE: Propose only for minimum 5 nights</span><br><br>
 <b>{nightlyRateText}</b><br><br>
-<b>Inclusions:</b><br><br>
-&bull; Exclusive use of Villa Fah Sai*<br>
-&bull; Taxes and Service Charges<br>
-&bull; Two-way airport transfers on same flight.<br>
-&bull; Welcome drink and cold towel, and fruit baskets on arrival.<br>
-&bull; Wireless internet access.<br>
-&bull; A team of full-time staff at your service including a chef and housekeepers.<br>
-&bull; Our chef will do all of your grocery shopping and prepare your meals. (Please note there is 20% of grocery cost as handling fee - subject to 7% VAT).<br>
-&bull; Guest Experience service<br><br>
+<b><u>Inclusions:</u></b>
+<ul style="margin: 8px 0 12px 20px; padding-left: 20px;">
+<li>Exclusive use of Villa Fah Sai*</li>
+<li>Taxes and Service Charges</li>
+<li>Two-way airport transfers on same flight.</li>
+<li>Welcome drink and cold towel, and fruit baskets on arrival.</li>
+<li>Wireless internet access.</li>
+<li>A team of full-time staff at your service including a chef and housekeepers.</li>
+<li>Our chef will do all of your grocery shopping and prepare your meals. (Please note there is 20% of grocery cost as handling fee - subject to 7% VAT).</li>
+<li>Guest Experience service</li>
+</ul>
 <b>Villa Features:</b> Infinity Pool, Dining terrace with outdoor BBQ overlooking Naka Lay Bay, Indoor Jacuzzi, Games room and treadmill.<br><br>
 <b>Terms:</b> Note that a refundable security deposit of US$ 1,500 is required in any currency payable by cash or credit card prior to check-in.`,
 
  "villahorizon": `<b><a href="https://www.villahorizonphuket.com/" target="_blank">Villa Horizon</a>, Kamala area, West Coast, Phuket</b><br><br>
 <b>{nightlyRateText}</b><br><br>
-<b>Inclusions:</b><br><br>
-&bull; Exclusive use of Villa Horizon*<br>
-&bull; Taxes and Service Charges<br>
-&bull; Two-way airport transfers on same flight.<br>
-&bull; Daily Continental or Asian Breakfast between 7AM to 11AM.<br>
-&bull; Welcome drink, cold towel and fruit basket on arrival.<br>
-&bull; Wireless Internet access.<br>
-&bull; A team of full-time staff at your service including a chef and housekeepers.<br>
-&bull; Our chef will do all of your grocery shopping and prepare your meals. (Please note there is 20% of grocery cost as handling fee - subject to 7% VAT).<br>
-&bull; Guest Experience service<br><br>
+<b><u>Inclusions:</u></b>
+<ul style="margin: 8px 0 12px 20px; padding-left: 20px;">
+<li>Exclusive use of Villa Horizon*</li>
+<li>Taxes and Service Charges</li>
+<li>Two-way airport transfers on same flight.</li>
+<li>Daily Continental or Asian Breakfast between 7AM to 11AM.</li>
+<li>Welcome drink, cold towel and fruit basket on arrival.</li>
+<li>Wireless Internet access.</li>
+<li>A team of full-time staff at your service including a chef and housekeepers.</li>
+<li>Our chef will do all of your grocery shopping and prepare your meals. (Please note there is 20% of grocery cost as handling fee - subject to 7% VAT).</li>
+<li>Guest Experience service</li>
+</ul>
 <b>Villa Features:</b> Seafront and Sunset view, Infinity Swimming Pool, Spa Room, Game Room with Pool Table, Wine Cellar, Three Large Jacuzzis, Pool Side Bar and Gym..<br><br>
 <b>Terms:</b> Note that a refundable security deposit of US$ 1,500 is required in any currency payable by cash or credit card prior to check-in.`,
 
  "villasawarin": `<b><a href="https://www.villasawarin.com/" target="_blank">Villa Sawarin</a>, Cape Yamu, East Coast, Phuket</b><br><br>
 <b>{nightlyRateText}</b><br><br>
-<b>Inclusions:</b><br><br>
-&bull; Exclusive use of Villa Sawarin*<br>
-&bull; Taxes and Service Charges<br>
-&bull; Two-way airport transfers on the same flight<br>
-&bull; Welcome drink and cold towel, and fruit baskets on arrival.<br>
-&bull; Wireless internet access<br>
-&bull; Turndown Service<br>
-&bull; A team of full-time staff at your service including a villa manager, 1 private chef, housekeepers<br>
-&bull; Our chef will do all of your grocery shopping and prepare your meals. (Please note there is 20% of grocery cost as handling fee - subject to 7% VAT).<br>
-&bull; Guest Experience services<br><br>
+<b><u>Inclusions:</u></b>
+<ul style="margin: 8px 0 12px 20px; padding-left: 20px;">
+<li>Exclusive use of Villa Sawarin*</li>
+<li>Taxes and Service Charges</li>
+<li>Two-way airport transfers on the same flight</li>
+<li>Welcome drink and cold towel, and fruit baskets on arrival.</li>
+<li>Wireless internet access</li>
+<li>Turndown Service</li>
+<li>A team of full-time staff at your service including a villa manager, 1 private chef, housekeepers</li>
+<li>Our chef will do all of your grocery shopping and prepare your meals. (Please note there is 20% of grocery cost as handling fee - subject to 7% VAT).</li>
+<li>Guest Experience services</li>
+</ul>
 <b>Villa Features:</b> *Beachfront with beach house area, swimming pool, fire pit, fully equipped fitness and spa room, kayak and paddle board, Family room with pool table and karaoke, Ping Pong table.<br><br>
 <b>Terms:</b> Note that a refundable security deposit of US$ 2,500 is required in any currency, and may be paid via Credit Card 2 days before arrival.`,
 
  "villaamann": `<b><a href="https://villaamannphuket.com/" target="_blank">Villa Amann</a>, Kamala area, West Coast, Phuket</b><br><br>
 <b>{nightlyRateText}</b><br><br>
-<b>Inclusions:</b><br><br>
-&bull; Exclusive use of Villa Amann*<br>
-&bull; Taxes and Service Charges<br>
-&bull; Daily Continental or Asian breakfast between 7AM to 11AM.<br>
-&bull; Two-way airport transfers in the same flight.<br>
-&bull; Welcome drink and cold towel, and fruit baskets on arrival<br>
-&bull; A team of full-time staff at your service including a villa manager, chef, housekeepers.<br>
-&bull; In-villa dining menu<br>
-&bull; Turndown Service.<br>
-&bull; Wireless internet access.<br>
-&bull; Guest Experience services<br><br>
+<b><u>Inclusions:</u></b>
+<ul style="margin: 8px 0 12px 20px; padding-left: 20px;">
+<li>Exclusive use of Villa Amann*</li>
+<li>Taxes and Service Charges</li>
+<li>Daily Continental or Asian breakfast between 7AM to 11AM.</li>
+<li>Two-way airport transfers in the same flight.</li>
+<li>Welcome drink and cold towel, and fruit baskets on arrival</li>
+<li>A team of full-time staff at your service including a villa manager, chef, housekeepers.</li>
+<li>In-villa dining menu</li>
+<li>Turndown Service.</li>
+<li>Wireless internet access.</li>
+<li>Guest Experience services</li>
+</ul>
 <b>Villa Features:</b> *Beachfront villa, Infinity Swimming Pool, Jacuzzi, Multi-purpose room with Home Theater, Karaoke, Mahjong Table and Spa Room.<br><br>
 <b>Beach:</b> The villa is located directly in front of the beach, offering lovely beachfront views and easy access to the shoreline. Swimming conditions can vary depending on the tide, with swimming generally more suitable during high tide when sea conditions permit.`,
 
  "villanarissa": `<b><a href="https://www.samsaraphuket.com/villa/narissa/" target="_blank">Villa Narissa</a>, Kamala area, West Coast, Phuket</b><br><br>
 <b>{nightlyRateText}</b><br><br>
-<b>Inclusions:</b><br><br>
-&bull; Exclusive use of Villa Narissa*<br>
-&bull; Taxes and Service Charges<br>
-&bull; Two-way airport transfers on same flight.<br>
-&bull; Welcome drink and cold towel, and fruit baskets on arrival.<br>
-&bull; Complimentary wireless internet access.<br>
-&bull; A team of full-time staff at your service including a chef and housekeepers.<br>
-&bull; Our chef will do all of your grocery shopping and prepare your meals. (Please note there is 20% of grocery cost as handling fee - subject to 7% VAT).<br>
-&bull; Turndown Service<br>
-&bull; Guest Experience service<br><br>
+<b><u>Inclusions:</u></b>
+<ul style="margin: 8px 0 12px 20px; padding-left: 20px;">
+<li>Exclusive use of Villa Narissa*</li>
+<li>Taxes and Service Charges</li>
+<li>Two-way airport transfers on same flight.</li>
+<li>Welcome drink and cold towel, and fruit baskets on arrival.</li>
+<li>Complimentary wireless internet access.</li>
+<li>A team of full-time staff at your service including a chef and housekeepers.</li>
+<li>Our chef will do all of your grocery shopping and prepare your meals. (Please note there is 20% of grocery cost as handling fee - subject to 7% VAT).</li>
+<li>Turndown Service</li>
+<li>Guest Experience service</li>
+</ul>
 <b>Villa Features:</b> *Infinity Pool, Fitness Room, Hang Out room, Rooftop Terrace, BBQ Facilities with Al Fresco Dining Area.<br><br>
 <b>Terms:</b> Note that a refundable security deposit of US$ 1,500 is required in any currency payable by cash or credit card prior to check-in.`,
 
  "theaquilavilla": `<b><a href="https://theaquilavilla.com/" target="_blank">The Aquila Villa</a>, Millionaire's Mile Kamala, West Coast, Phuket</b><br><br>
 <b>{nightlyRateText}</b><br><br>
-<b>Inclusions:</b><br><br>
-&bull; Exclusive use of Villa Aquila*<br>
-&bull; Taxes and Service Charges<br>
-&bull; Welcome drink and cold towel, and fruit basket on arrival<br>
-&bull; Two-way airport transfers on same flight<br>
-&bull; Continental or Asian breakfast between 7AM to 11AM<br>
-&bull; Wireless Internet access.<br>
-&bull; Turndown Service.<br>
-&bull; A team of full-time staff at your service including a villa manager, chef, housekeepers.<br>
-&bull; Our chef will do all of your grocery shopping and prepare your meals. (Please note there is 20% of grocery cost as handling fee - subject to 7% VAT).<br>
-&bull; Guest Experience services<br><br>
+<b><u>Inclusions:</u></b>
+<ul style="margin: 8px 0 12px 20px; padding-left: 20px;">
+<li>Exclusive use of Villa Aquila*</li>
+<li>Taxes and Service Charges</li>
+<li>Welcome drink and cold towel, and fruit basket on arrival</li>
+<li>Two-way airport transfers on same flight</li>
+<li>Continental or Asian breakfast between 7AM to 11AM</li>
+<li>Wireless Internet access.</li>
+<li>Turndown Service.</li>
+<li>A team of full-time staff at your service including a villa manager, chef, housekeepers.</li>
+<li>Our chef will do all of your grocery shopping and prepare your meals. (Please note there is 20% of grocery cost as handling fee - subject to 7% VAT).</li>
+<li>Guest Experience services</li>
+</ul>
 <b>Villa Features:</b> Waterfront property, 30 meters Infinity pool, Kids Pool, Direct access to the Sea, Alfresco Dining Area, Outdoor Sala and Bar, Entertainment are and bar with Pool Table, Elevator (wheelchair-friendly), Cinema Room, Library, Gym Room, Spa, Conference Area, Wine Cellar and Large Garden Area.<br><br>
 <b>Terms:</b> Note that a refundable security deposit of US$ 5,000 is required in any currency, and may be paid by bank transfer 10 days before arrival or processed via Credit Card 2 days before arrival.<br><br>
 <span style="color:#ff0000; font-style:italic;">** For accredited agencies, commission for Reserve Villas is subject to a maximum cap of 10% and cannot be extended beyond this rate.</span>`,
 
  "villaamankara": `<b><a href="https://amankaraphuket.com/" target="_blank">Villa Amankara</a>, Kata Noi Beach, West Coast, Phuket</b><br><br>
 <b>{nightlyRateText}</b><br><br>
-<b>Inclusions:</b><br><br>
-&bull; Exclusive use of Villa Amankara*<br>
-&bull; Taxes and Service Charges<br>
-&bull; Two-way airport transfers on the same flight.<br>
-&bull; Welcome drink and cold towel, and fruit baskets on arrival.<br>
-&bull; Wireless Internet access.<br>
-&bull; Turndown Service.<br>
-&bull; A team of full-time staff at your service including a villa manager, chef, housekeepers.<br>
-&bull; Our chef will do all of your grocery shopping and prepare your meals. (Please note there is 20% of grocery cost as handling fee - subject to 7% VAT).<br>
-&bull; Guest Experience services<br><br>
+<b><u>Inclusions:</u></b>
+<ul style="margin: 8px 0 12px 20px; padding-left: 20px;">
+<li>Exclusive use of Villa Amankara*</li>
+<li>Taxes and Service Charges</li>
+<li>Two-way airport transfers on the same flight.</li>
+<li>Welcome drink and cold towel, and fruit baskets on arrival.</li>
+<li>Wireless Internet access.</li>
+<li>Turndown Service.</li>
+<li>A team of full-time staff at your service including a villa manager, chef, housekeepers.</li>
+<li>Our chef will do all of your grocery shopping and prepare your meals. (Please note there is 20% of grocery cost as handling fee - subject to 7% VAT).</li>
+<li>Guest Experience services</li>
+</ul>
 <b>Villa Features:</b> Panoramic Ocean view, Swimming pool, Plunge pool, Elevator (except lower level), Spa, pool deck with sun beds, outdoor lounge, Game room with Pool Table near the Estate Clubhouse includes a tennis court, and a well-equipped gym.<br><br>
 <b>Terms:</b> Note that a refundable security deposit of US$ 2,500 is required in any currency, and may be paid via Credit Card 2 days before arrival.`,
 
  "villaanda": `<b><a href="https://villaanda.com/" target="_blank">Villa Anda</a>, Kamala area, West Coast, Phuket</b><br><br>
 <b>{nightlyRateText}</b><br><br>
-<b>Inclusions:</b><br><br>
-&bull; Exclusive use of Villa Anda*<br>
-&bull; Taxes and Service Charges<br>
-&bull; Daily Continental or Asian breakfast between 7AM to 11AM.<br>
-&bull; Two-way airport transfers in the same flight.<br>
-&bull; Welcome drink and cold towel, and fruit baskets on arrival<br>
-&bull; A team of full-time staff at your service including a villa manager, chef, housekeepers.<br>
-&bull; In-villa dining menu<br>
-&bull; Turndown Service.<br>
-&bull; Wireless internet access.<br>
-&bull; Guest Experience services<br><br>
+<b><u>Inclusions:</u></b>
+<ul style="margin: 8px 0 12px 20px; padding-left: 20px;">
+<li>Exclusive use of Villa Anda*</li>
+<li>Taxes and Service Charges</li>
+<li>Daily Continental or Asian breakfast between 7AM to 11AM.</li>
+<li>Two-way airport transfers in the same flight.</li>
+<li>Welcome drink and cold towel, and fruit baskets on arrival</li>
+<li>A team of full-time staff at your service including a villa manager, chef, housekeepers.</li>
+<li>In-villa dining menu</li>
+<li>Turndown Service.</li>
+<li>Wireless internet access.</li>
+<li>Guest Experience services</li>
+</ul>
 <b>Villa Features:</b> *Infinity Pool, Beachfront Property, BBQ Facilities, Pool table, Board games, Kayak and Paddle board, Snorkeling gear, Multi-purpose room, Mahjong Table.<br><br>
 <b>Beach:</b> The villa is located directly in front of the beach, offering lovely beachfront views and easy access to the shoreline. Swimming conditions can vary depending on the tide, with swimming generally more suitable during high tide when sea conditions permit.<br><br>
 Note that a refundable security deposit of US$2,500 is required in any currency, and may be paid via Credit Card 2 days before arrival.`,
 
  "villalaprana": `<b><a href="https://www.lapranaphuket.com/" target="_blank">Villa La Prana</a>, Millionaire's Mile Kamala, West Coast, Phuket</b><br><br>
 <b>{nightlyRateText}</b><br><br>
-<b>Inclusions:</b><br><br>
-&bull; Exclusive use of Villa La Prana*<br>
-&bull; Taxes and Service Charges<br>
-&bull; Two-way airport transfers on same flight.<br>
-&bull; Daily Continental or Asian Breakfast between 7AM to 11AM.<br>
-&bull; Welcome drink, cold towel and fruit baskets on arrival.<br>
-&bull; Wireless internet access.<br>
-&bull; A team of full-time staff at your service including a chef and housekeepers.<br>
-&bull; Our chef will do all of your grocery shopping and prepare your meals. (Please note there is 20% of grocery cost as handling fee - subject to 7% VAT).<br>
-&bull; Turnover Service<br>
-&bull; Guest Experience service<br><br>
+<b><u>Inclusions:</u></b>
+<ul style="margin: 8px 0 12px 20px; padding-left: 20px;">
+<li>Exclusive use of Villa La Prana*</li>
+<li>Taxes and Service Charges</li>
+<li>Two-way airport transfers on same flight.</li>
+<li>Daily Continental or Asian Breakfast between 7AM to 11AM.</li>
+<li>Welcome drink, cold towel and fruit baskets on arrival.</li>
+<li>Wireless internet access.</li>
+<li>A team of full-time staff at your service including a chef and housekeepers.</li>
+<li>Our chef will do all of your grocery shopping and prepare your meals. (Please note there is 20% of grocery cost as handling fee - subject to 7% VAT).</li>
+<li>Turnover Service</li>
+<li>Guest Experience service</li>
+</ul>
 <b>Villa Features:</b> Ocean and Sunset view, Seaside deck with access to the Ocean, Swimming pool with waterfalls feature, Pool Table, Outdoor Bathtub, Bar, Sala Pool, Spa Room with Steam Room, and Gym Room...<br><br>
 Note that a refundable security deposit of US$ 2,500 is required in any currency, and may be paid via Credit Card 2 days before arrival.`,
 
  "villalathale": `<b><a href="https://www.lathalephuket.com/" target="_blank">Villa La Thalé</a>, Millionaire's Mile Kamala, West Coast, Phuket</b><br><br>
 <b>{nightlyRateText}</b><br><br>
-<b>Inclusions:</b><br><br>
-&bull; Exclusive use of Villa La Thalè*<br>
-&bull; Taxes and Service Charges<br>
-&bull; Two-way airport transfers on same flight.<br>
-&bull; Daily Continental or Asian Breakfast between 7AM to 11AM.<br>
-&bull; Welcome drink, cold towel and fruit basket on arrival.<br>
-&bull; Wireless internet access.<br>
-&bull; Daily Housekeeping<br>
-&bull; Turndown Service<br>
-&bull; A team of full-time staff at your service including a chef and housekeepers.<br>
-&bull; Our chef will do all of your grocery shopping and prepare your meals. (Please note there is 20% of grocery cost as handling fee - subject to 7% VAT).<br>
-&bull; Guest Experience services<br><br>
+<b><u>Inclusions:</u></b>
+<ul style="margin: 8px 0 12px 20px; padding-left: 20px;">
+<li>Exclusive use of Villa La Thalè*</li>
+<li>Taxes and Service Charges</li>
+<li>Two-way airport transfers on same flight.</li>
+<li>Daily Continental or Asian Breakfast between 7AM to 11AM.</li>
+<li>Welcome drink, cold towel and fruit basket on arrival.</li>
+<li>Wireless internet access.</li>
+<li>Daily Housekeeping</li>
+<li>Turndown Service</li>
+<li>A team of full-time staff at your service including a chef and housekeepers.</li>
+<li>Our chef will do all of your grocery shopping and prepare your meals. (Please note there is 20% of grocery cost as handling fee - subject to 7% VAT).</li>
+<li>Guest Experience services</li>
+</ul>
 <b>Villa Features:</b> Ocean and sunset view, Access to the estate beach, Four infinity swimming pools, Jacuzzis, Outdoor Bathtubs, Outdoor gazebo, Gym and Yoga room, Access to estate's Pickleball court.<br><br>
 Note that a refundable security deposit of US$ 2,500 is required in any currency, and may be paid via Credit Card 2 days before arrival.`,
 
  "villaboonta": `<b><a href="https://www.boontavilla.com/" target="_blank">Villa Boonta</a>, Natai Beach, Phuket</b><br><br>
 <b>{nightlyRateText}</b><br><br>
-<b>Inclusions:</b><br><br>
-&bull; Exclusive use of Villa Boonta*<br>
-&bull; Taxes and Service Charges<br>
-&bull; Two-way airport transfers on same flight.<br>
-&bull; Daily Continental or Asian Breakfast between 7AM to 11AM.<br>
-&bull; Welcome drink, cold towel and fruit basket on arrival.<br>
-&bull; Wireless internet access.<br>
-&bull; A team of full-time staff at your service including a chef and housekeepers.<br>
-&bull; Our chef will do all of your grocery shopping and prepare your meals. (Please note there is 20% of grocery cost as handling fee - subject to 7% VAT).<br>
-&bull; Turndown Service<br>
-&bull; Guest Experience service<br><br>
+<b><u>Inclusions:</u></b>
+<ul style="margin: 8px 0 12px 20px; padding-left: 20px;">
+<li>Exclusive use of Villa Boonta*</li>
+<li>Taxes and Service Charges</li>
+<li>Two-way airport transfers on same flight.</li>
+<li>Daily Continental or Asian Breakfast between 7AM to 11AM.</li>
+<li>Welcome drink, cold towel and fruit basket on arrival.</li>
+<li>Wireless internet access.</li>
+<li>A team of full-time staff at your service including a chef and housekeepers.</li>
+<li>Our chef will do all of your grocery shopping and prepare your meals. (Please note there is 20% of grocery cost as handling fee - subject to 7% VAT).</li>
+<li>Turndown Service</li>
+<li>Guest Experience service</li>
+</ul>
 <b>Villa Features:</b> Beachfront property, Ocean and Sunset view, Two infinity Swimming pools, Jacuzzi, Foosball, Pool Table, Ping pong Table, Fully Equipped Fitness Room, Sauna and Steam Room and Mahjong Table (upon request).<br><br>
 <b>Location:</b> Natai Beach is located in Phang Nga Province on the southern mainland of Thailand, about 20–25 minutes (approx. 27 km) from Phuket International Airport.<br><br>
 Note that a refundable security deposit of US$ 2,500 is required in any currency payable by cash or credit card prior to check-in.`,
 
  "villamayavee": `<b><a href="https://www.villamayaveephuket.com/" target="_blank">Villa Mayavee</a>, Millionaire's Mile Kamala</b><br><br>
 <b>{nightlyRateText}</b><br><br>
-<b>Inclusions:</b><br><br>
-&bull; Exclusive use of Villa Mayavee*<br>
-&bull; Avail 20% discount when you book Mayavee Yacht<br>
-&bull; Taxes & Services Charge<br>
-&bull; Daily Continental or Asian breakfast between 7AM to 11AM.<br>
-&bull; Two-way airport transfers on the same flight.<br>
-&bull; Welcome drink and cold towel, and fruit baskets on arrival.<br>
-&bull; Wireless internet access.<br>
-&bull; Turndown Service.<br>
-&bull; A team of full-time staff at your service including a villa manager, chef, housekeepers.<br>
-&bull; Our chef will do all of your grocery shopping and prepare your meals. (Please note there is 20% of grocery cost as handling fee - subject to 7% VAT).<br>
-&bull; Guest Experience services<br><br>
+<b><u>Inclusions:</u></b>
+<ul style="margin: 8px 0 12px 20px; padding-left: 20px;">
+<li>Exclusive use of Villa Mayavee*</li>
+<li>Avail 20% discount when you book Mayavee Yacht</li>
+<li>Taxes & Services Charge</li>
+<li>Daily Continental or Asian breakfast between 7AM to 11AM.</li>
+<li>Two-way airport transfers on the same flight.</li>
+<li>Welcome drink and cold towel, and fruit baskets on arrival.</li>
+<li>Wireless internet access.</li>
+<li>Turndown Service.</li>
+<li>A team of full-time staff at your service including a villa manager, chef, housekeepers.</li>
+<li>Our chef will do all of your grocery shopping and prepare your meals. (Please note there is 20% of grocery cost as handling fee - subject to 7% VAT).</li>
+<li>Guest Experience services</li>
+</ul>
 <b>Villa Features:</b> Ocean and Sunset view, Infinity Pool, Fully-Equipped Fitness Room, Jacuzzi's on Master Bedroom, BOSE Sound System, Sun Deck Lounges, Rooftop Terrace with Panoramic Views..<br><br>
 Note that a refundable security deposit of US$ 4,000 is required in any currency, and may be paid via Credit Card 2 days before arrival.`,
 
  "baanplearntalee": `<b><a href="https://baanplearntalee.com/" target="_blank">Baan Plearn Talee</a>, Kamala, West Coast, Phuket</b><br><br>
 <b>{nightlyRateText}</b><br><br>
-<b>Inclusions:</b><br><br>
-&bull; Exclusive use of Baan Plearn Talee*<br>
-&bull; Taxes and Service Charges<br>
-&bull; Daily American Breakfast between 7AM to 11AM<br>
-&bull; Two way Airport Transfer on the same flight.<br>
-&bull; Welcome Drinks and Fruit Basket.<br>
-&bull; Wireless internet access.<br>
-&bull; Turndown Service<br>
-&bull; A team of full-time staff at your service including a villa manager, chef, housekeepers.<br>
-&bull; Our chef will do all of your grocery shopping and prepare your meals.(Please note there is 20% of grocery cost as handling fee - subject to 7% VAT).<br>
-&bull; Guest Experience services<br><br>
+<b><u>Inclusions:</u></b>
+<ul style="margin: 8px 0 12px 20px; padding-left: 20px;">
+<li>Exclusive use of Baan Plearn Talee*</li>
+<li>Taxes and Service Charges</li>
+<li>Daily American Breakfast between 7AM to 11AM</li>
+<li>Two way Airport Transfer on the same flight.</li>
+<li>Welcome Drinks and Fruit Basket.</li>
+<li>Wireless internet access.</li>
+<li>Turndown Service</li>
+<li>A team of full-time staff at your service including a villa manager, chef, housekeepers.</li>
+<li>Our chef will do all of your grocery shopping and prepare your meals.(Please note there is 20% of grocery cost as handling fee - subject to 7% VAT).</li>
+<li>Guest Experience services</li>
+</ul>
 <b>Villa Features:</b> *Infinity Swimming Pool, Outdoor Heated Jacuzzi, Sundeck with Bar Area and BBQ Facilities, Patio Area, Outdoor Sala with Ocean and Pool view, Media Room, Foosball Table, Wine Fridges, Karaoke System, Washer and Dryer Machine PlayStation 5 Gaming Console and Garage.<br><br>
 Note that a refundable security deposit of USD $ 2,500 is required in any currency, and may be paid via Credit Card or Bank transfer 2 days before arrival.`,
 
  "villaanyaa": `<b><span style="color:#0000ee; text-decoration:underline;">Villa Anyaa</span>, Kamala area, West Coast, Phuket</b><br><br>
 <b>{nightlyRateText}</b><br><br>
-<b>Inclusions:</b><br><br>
-&bull; Exclusive use of Villa Anyaa*<br>
-&bull; Taxes and Service Charges<br>
-&bull; Daily Continental or Asian breakfast between 7AM to 11AM.<br>
-&bull; Two-way airport transfers in the same flight.<br>
-&bull; Welcome drink and cold towel, and fruit baskets on arrival<br>
-&bull; A team of full-time staff at your service including a villa manager, chef, housekeepers.<br>
-&bull; In-villa dining menu<br>
-&bull; Turndown Service.<br>
-&bull; Wireless internet access.<br>
-&bull; Guest Experience services<br><br>
+<b><u>Inclusions:</u></b>
+<ul style="margin: 8px 0 12px 20px; padding-left: 20px;">
+<li>Exclusive use of Villa Anyaa*</li>
+<li>Taxes and Service Charges</li>
+<li>Daily Continental or Asian breakfast between 7AM to 11AM.</li>
+<li>Two-way airport transfers in the same flight.</li>
+<li>Welcome drink and cold towel, and fruit baskets on arrival</li>
+<li>A team of full-time staff at your service including a villa manager, chef, housekeepers.</li>
+<li>In-villa dining menu</li>
+<li>Turndown Service.</li>
+<li>Wireless internet access.</li>
+<li>Guest Experience services</li>
+</ul>
 <b>Villa Features:</b> Beachfront villa, Infinity Swimming Pool, Fun Pool, Elevator, Karaoke, Living and Dining Area, and Spa Room.<br><br>
 <b>Beach:</b> The villa is located directly in front of the beach, offering lovely beachfront views and easy access to the shoreline. Swimming conditions can vary depending on the tide, with swimming generally more suitable during high tide when sea conditions permit.<br><br>
 Note that a refundable security deposit of US$ 2,500 is required in any currency, and may be paid via Credit Card 2 days before arrival.`,
 
  "villahin": `<b><a href="https://www.theluxurysignature.com/property/villa-hin-koh-samui/" target="_blank">Villa Hin</a> Choeng Mon, Koh Samui</b><br><br>
 <b>{nightlyRateText}</b><br><br>
-<b>Inclusions:</b><br><br>
-&bull; Exclusive use of Villa Hin*<br>
-&bull; Taxes and Service Charges<br>
-&bull; Two-way airport transfers on same flight.<br>
-&bull; Continental or Asian Breakfast between 7AM to 11AM.<br>
-&bull; Welcome drink, cold towel and fruit basket on arrival.<br>
-&bull; Wireless internet access.<br>
-&bull; Turndown service<br>
-&bull; A team of full-time staff at your service including a villa manager, chef, housekeepers.<br>
-&bull; Our chef will do all of your grocery shopping and prepare your meals. (Please note there is 20% of grocery cost as handling fee - subject to 7% VAT).<br>
-&bull; Guest Experience services<br><br>
+<b><u>Inclusions:</u></b>
+<ul style="margin: 8px 0 12px 20px; padding-left: 20px;">
+<li>Exclusive use of Villa Hin*</li>
+<li>Taxes and Service Charges</li>
+<li>Two-way airport transfers on same flight.</li>
+<li>Continental or Asian Breakfast between 7AM to 11AM.</li>
+<li>Welcome drink, cold towel and fruit basket on arrival.</li>
+<li>Wireless internet access.</li>
+<li>Turndown service</li>
+<li>A team of full-time staff at your service including a villa manager, chef, housekeepers.</li>
+<li>Our chef will do all of your grocery shopping and prepare your meals. (Please note there is 20% of grocery cost as handling fee - subject to 7% VAT).</li>
+<li>Guest Experience services</li>
+</ul>
 <b>Villa Features:</b> *An L-shaped Infinity Pool with Spectacular Ocean View, Access to the Beach, Cinema Room, Bar and lounge area, Rooftop terrace, Board games, Access to Tennis Court in the Estate.<br><br>
 <b>Terms:</b> Note that a refundable security deposit of US$ 1,500 is required in any currency, and may be paid via Credit Card 2 days before arrival.`,
 
  "villaanavaya": `<b><a href="https://www.theluxurysignature.com/property/villa-anavaya-koh-samui/" target="_blank">Villa Anavaya</a>, Choeng Mon Area, Koh Samui</b><br><br>
 <b>{nightlyRateText}</b><br><br>
-<b>Inclusions:</b><br><br>
-&bull; Exclusive use of Villa Anavaya*<br>
-&bull; Taxes and Service Charges<br>
-&bull; Two-way airport transfers on same flight.<br>
-&bull; Continental or Asian Breakfast between 7AM to 11AM<br>
-&bull; Welcome drink, cold towel and fruit basket on arrival.<br>
-&bull; Wireless Internet access.<br>
-&bull; Turndown service<br>
-&bull; A team of full-time staff at your service including a villa manager, chef, housekeepers.<br>
-&bull; Our chef will do all of your grocery shopping and prepare your meals. All items are charged based on market cost and procurement fees of 15% and subject to 7% VAT.<br>
-&bull; Guest Experience services<br><br>
+<b><u>Inclusions:</u></b>
+<ul style="margin: 8px 0 12px 20px; padding-left: 20px;">
+<li>Exclusive use of Villa Anavaya*</li>
+<li>Taxes and Service Charges</li>
+<li>Two-way airport transfers on same flight.</li>
+<li>Continental or Asian Breakfast between 7AM to 11AM</li>
+<li>Welcome drink, cold towel and fruit basket on arrival.</li>
+<li>Wireless Internet access.</li>
+<li>Turndown service</li>
+<li>A team of full-time staff at your service including a villa manager, chef, housekeepers.</li>
+<li>Our chef will do all of your grocery shopping and prepare your meals. All items are charged based on market cost and procurement fees of 15% and subject to 7% VAT.</li>
+<li>Guest Experience services</li>
+</ul>
 <b>Villa Features:</b> Infinity L-Shaped Pool with Jacuzzi, Access to the Beach, Fitness Room, Cinema, Apple TV, Netflix, Ping Pong Table, Office, Access to Tennis Court in the Estate...<br><br>
 <b>Terms:</b> Note that a refundable security deposit of US$ 2,500 is required in any currency, and may be paid via Credit Card 2 days before arrival.`,
 
  "villaraku": `<b><a href="https://www.theluxurysignature.com/property/villa-raku-koh-samui/" target="_blank">Villa Raku</a>, Bang Por Area, Koh Samui</b><br><br>
 <b>{nightlyRateText}</b><br><br>
-<b>Inclusions:</b><br><br>
-&bull; Exclusive use of Villa Raku*<br>
-&bull; Taxes and Service Charges<br>
-&bull; Two-way airport transfers on same flight.<br>
-&bull; Continental or Asian Breakfast between 7AM to 11AM.<br>
-&bull; Welcome drink, cold towel and fruit basket on arrival.<br>
-&bull; Wireless Internet access.<br>
-&bull; Turndown service<br>
-&bull; A team of full-time staff at your service including a villa manager, chef, housekeepers.<br>
-&bull; Our chef will do all of your grocery shopping and prepare your meals. (Please note there is 20% of grocery cost as handling fee - subject to 7% VAT).<br>
-&bull; Guest Experience services<br><br>
+<b><u>Inclusions:</u></b>
+<ul style="margin: 8px 0 12px 20px; padding-left: 20px;">
+<li>Exclusive use of Villa Raku*</li>
+<li>Taxes and Service Charges</li>
+<li>Two-way airport transfers on same flight.</li>
+<li>Continental or Asian Breakfast between 7AM to 11AM.</li>
+<li>Welcome drink, cold towel and fruit basket on arrival.</li>
+<li>Wireless Internet access.</li>
+<li>Turndown service</li>
+<li>A team of full-time staff at your service including a villa manager, chef, housekeepers.</li>
+<li>Our chef will do all of your grocery shopping and prepare your meals. (Please note there is 20% of grocery cost as handling fee - subject to 7% VAT).</li>
+<li>Guest Experience services</li>
+</ul>
 <b>Villa Features:</b> Infinity Pool with Sunset View, Sala with sea view, Gym, Foosball table, kids room..<br><br>
 <b>Terms:</b> Note that a refundable security deposit of USD 1,500 is required in any currency, and may be paid by bank transfer 10 days before arrival or processed via Credit card 2 days before arrival.`
 };
