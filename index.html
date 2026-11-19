@@ -3314,14 +3314,16 @@ function processVillaPart(part, nights) {
    totalSplitAmount += (sNightly * s.nights);
   });
 
-  let avgNightly = totalSplitNights > 0 ? (totalSplitAmount / totalSplitNights) : 0;
-  avgNightly = roundUp ? Math.ceil(avgNightly / 5) * 5 : Math.floor(avgNightly / 5) * 5;
+  let rawAvgNightly = totalSplitNights > 0 ? (totalSplitAmount / totalSplitNights) : 0;
+  let avgNightly = roundUp ? Math.ceil(rawAvgNightly / 5) * 5 : Math.floor(rawAvgNightly / 5) * 5;
   totalSplitAmount = avgNightly * totalSplitNights;
 
   return {
    villa,
+   rawNightly: rawAvgNightly,
    nightly: avgNightly,
    newTot: totalSplitAmount,
+   roundUp: roundUp,
    isPromo: false,
    promoStay: 0,
    promoPay: 0,
@@ -3383,6 +3385,7 @@ function processVillaPart(part, nights) {
   exactNightly = nights > 0 ? (effectiveInputNumber / nights) : 0;
  }
  
+ let rawNightly = exactNightly + additionalSum;
  let nightly = (isPromoActive || roundUp) ? Math.ceil(exactNightly / 5) * 5 : Math.floor(exactNightly / 5) * 5;
  nightly += additionalSum;
  
@@ -3390,8 +3393,10 @@ function processVillaPart(part, nights) {
  
  return { 
   villa, 
+  rawNightly,
   nightly, 
   newTot, 
+  roundUp: (isPromoActive || roundUp),
   isPromo: isPromoActive, 
   promoStay, 
   promoPay, 
@@ -3441,6 +3446,7 @@ function gen(){
     let totalCombinedSum = 0;
     let partsCalculated = [];
     let hasAnyPromo = false;
+    let anyRoundUp = false;
     
     parts.forEach(part => {
      let res = processVillaPart(part, nights);
@@ -3448,6 +3454,7 @@ function gen(){
       combinedNames.push(res.villa);
       totalCombinedSum += res.newTot;
       if(res.isPromo) hasAnyPromo = true;
+      if(res.roundUp) anyRoundUp = true;
       partsCalculated.push(res);
 
       let cleanKey = cleanVillaKey(res.villa);
@@ -3464,6 +3471,12 @@ function gen(){
     });
     
     if (partsCalculated.length > 0) {
+     let rawCombinedNightly = partsCalculated.reduce((sum, p) => sum + p.rawNightly, 0);
+     let combinedNightly = anyRoundUp ? Math.ceil(rawCombinedNightly / 5) * 5 : Math.floor(rawCombinedNightly / 5) * 5;
+     if (!hasAnyPromo) {
+      totalCombinedSum = combinedNightly * nights;
+     }
+
      let htmlTables = '';
      let isProposalMode = (emailProposalChecked || respondioProposalChecked);
 
@@ -3509,10 +3522,10 @@ function gen(){
       }
       let combinedActiveNights = nights;
       let combinedRateTable = respondioProposalChecked
-       ? `<div class="plain-text-line">${combinedActiveNights} nights x ${cur} ${fmt(totalCombinedSum / (combinedActiveNights || 1))} = ${cur} ${fmtTot(totalCombinedSum)}</div>`
+       ? `<div class="plain-text-line">${combinedActiveNights} nights x ${cur} ${fmt(combinedNightly)} = ${cur} ${fmtTot(totalCombinedSum)}</div>`
        : `
        <table style="border-collapse:collapse;font-family:'Times New Roman',Times,serif;font-size:14px;background:#fff;font-weight:bold;margin:10px 0;width:auto;">
-        <tr><td class="left">${combinedActiveNights} nights × ${cur} ${fmt(totalCombinedSum / (combinedActiveNights || 1))}</td><td class="right">${cur} ${fmtTot(totalCombinedSum)}</td></tr>
+        <tr><td class="left">${combinedActiveNights} nights × ${cur} ${fmt(combinedNightly)}</td><td class="right">${cur} ${fmtTot(totalCombinedSum)}</td></tr>
        </table>
       `;
 
@@ -3541,7 +3554,6 @@ function gen(){
          }
         });
        } else {
-        let combinedNightly = partsCalculated.reduce((sum, p) => sum + p.nightly, 0);
         htmlTables = `<div class="plain-text-line">${nights} nights x ${cur} ${fmt(combinedNightly)} = ${cur} ${fmtTot(totalCombinedSum)}</div>`;
        }
       } else {
@@ -3559,7 +3571,6 @@ function gen(){
          }
         });
        } else {
-        let combinedNightly = partsCalculated.reduce((sum, p) => sum + p.nightly, 0);
         htmlTables = `<table style="border-collapse:collapse;font-family:'Times New Roman',Times,serif;font-size:14px;background:#fff;font-weight:bold;width:auto;">
         <tr><td class="left">${nights} nights × ${cur} ${fmt(combinedNightly)}</td><td class="right">${cur} ${fmtTot(totalCombinedSum)}</td></tr></table>`;
        }
