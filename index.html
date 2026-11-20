@@ -3638,7 +3638,7 @@ function gen(){
 
       if (respondioProposalChecked) {
        renderedProposal = renderedProposal.replace(/<b><a href="([^"]+)" target="_blank">([^<]+)<\/a>([^<]*)<\/b>/g, function(match, url, villaName, restOfTitle) {
-        return `<b>${villaName}${restOfTitle}</b><br><a href="${url}" target="_blank">${url}</a>`;
+        return `<b>${villaName}${restOfTitle}</b><br><a href="${url}" target="_blank">${url}</a><br>`;
        });
        renderedProposal = renderedProposal.replace(/<a href="([^"]+)" target="_blank">([^<]*(?:Terms|Conditions)[^<]*)<\/a>/gi, function(match, url, text) {
         return `${text} (${url})`;
@@ -3664,7 +3664,6 @@ function gen(){
          ${promoTitleHtml}
          <div class="plain-text-line">${activeNightsCount} nights x ${cur} ${fmt(res.nightly)} = ${cur} ${fmtTot(res.newTot)}</div>
          ${res.isPromo ? `<div class="plain-text-line">${res.freeNights} night${res.freeNights > 1 ? 's' : ''} x ${cur} 0 = ${cur} 0.00</div>` : ''}
-         <br>
          ${voucherHtml}
          ${descBlock}
         `;
