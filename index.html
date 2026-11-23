@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html><head><meta charset="utf-8"><title>VillaQUOTE V11.9.7</title>
+<html><head><meta charset="utf-8"><title>VillaQUOTE V11.9.9</title>
 <style>
 body{font-family:'Times New Roman', Times, serif;background:#f4f4f4;padding:30px}
 .container{max-width:900px;margin:auto;background:#fff;padding:20px;border-radius:8px;position:relative;}
@@ -44,7 +44,7 @@ td{border:1px solid #000;padding:8px 12px;background:#fff;font-size:14px;font-we
 .footer-credit {text-align: right; font-size: 12px; color: #777; margin-top: 25px; font-style: italic;}
 </style></head><body>
 <div class="container">
-<h2>Villa Quote v11.9.7</h2>
+<h2>Villa Quote v11.9.9</h2>
 <div class="logo-container">
  <img src="https://www.theluxurysignature.com/wp-content/uploads/2022/09/TLS-logo.png" alt="The Luxury Signature">
 </div>
@@ -80,6 +80,7 @@ td{border:1px solid #000;padding:8px 12px;background:#fff;font-size:14px;font-we
  <label><input id="respondioWithTemplate" type="checkbox"> Respondio (With Templates)</label>
  <label><input id="respondioWithoutTemplate" type="checkbox"> Respondio (Without Templates)</label>
  <label><input id="emailProposalToggle" type="checkbox"> Email Proposal</label>
+ <label><input id="hubspotToggle" type="checkbox"> HubSpot</label>
  <label><input id="respondioProposalToggle" type="checkbox"> Respondio Proposal</label>
  <label><input id="agentEmailToggle" type="checkbox"> Agent (Email)</label>
  <label><input id="agentRespondioToggle" type="checkbox"> Agent (Respondio)</label>
@@ -3421,6 +3422,7 @@ function gen(){
   let withTemplateChecked = document.getElementById('respondioWithTemplate').checked;
   let withoutTemplateChecked = document.getElementById('respondioWithoutTemplate').checked;
   let emailProposalChecked = document.getElementById('emailProposalToggle').checked;
+  let hubspotChecked = document.getElementById('hubspotToggle').checked;
   let respondioProposalChecked = document.getElementById('respondioProposalToggle').checked;
   let agentEmailChecked = document.getElementById('agentEmailToggle').checked;
   let agentRespondioChecked = document.getElementById('agentRespondioToggle').checked;
@@ -3478,7 +3480,7 @@ function gen(){
      }
 
      let htmlTables = '';
-     let isProposalMode = (emailProposalChecked || respondioProposalChecked);
+     let isProposalMode = (emailProposalChecked || respondioProposalChecked || hubspotChecked);
 
      if (isProposalMode) {
       let combinedTitleNames = [];
@@ -3502,7 +3504,10 @@ function gen(){
         let templateStr = emailProposalTemplates[templateKey];
 
         let renderedSubProp = templateStr.replaceAll('{rateTableHtml}', '');
-        renderedSubProp = renderedSubProp.replace(/^<b>.*?<\/b><br><br>/, '');
+        renderedSubProp = renderedSubProp.replace(/^<b>.*?<\/b>(?:<br>)+/i, '');
+        renderedSubProp = renderedSubProp.replace(/<b><a [^>]*>.*?<\/a>[^<]*<\/b>(?:<br>)+/i, '');
+        renderedSubProp = renderedSubProp.replace(/<b><span [^>]*>.*?<\/span>[^<]*<\/b>(?:<br>)+/i, '');
+        renderedSubProp = renderedSubProp.replace(/^(?:<br>\s*)+/i, '');
         renderedSubProp = renderedSubProp.replace(/<br>\s*<\/li>/gi, '</li>');
 
         if (respondioProposalChecked) {
@@ -3521,7 +3526,7 @@ function gen(){
        combinedHeaderTitle += '<br>' + combinedLinks.join('<br>');
       }
       let combinedActiveNights = nights;
-      let combinedRateTable = respondioProposalChecked
+      let combinedRateTable = (respondioProposalChecked || hubspotChecked)
        ? `<div class="plain-text-line">${combinedActiveNights} nights x ${cur} ${fmt(combinedNightly)} = ${cur} ${fmtTot(totalCombinedSum)}</div>`
        : `
        <table style="border-collapse:collapse;font-family:'Times New Roman',Times,serif;font-size:14px;background:#fff;font-weight:bold;margin:10px 0;width:auto;">
@@ -3616,12 +3621,12 @@ function gen(){
 
       htmlTables = `<div class="rich-proposal">${renderedProposal}</div>`;
       arr.push({ villa: '', newTot: res.newTot, customHtml: htmlTables, isEmailProposal: true });
-     } else if ((emailProposalChecked || respondioProposalChecked) && templateKey && emailProposalTemplates[templateKey]) {
+     } else if ((emailProposalChecked || respondioProposalChecked || hubspotChecked) && templateKey && emailProposalTemplates[templateKey]) {
       let activeNightsCount = (res.paidNights > 0) ? res.paidNights : nights;
       let templateStr = emailProposalTemplates[templateKey];
 
-      let boxedRateTable = respondioProposalChecked
-       ? `
+      let boxedRateTable = (respondioProposalChecked || hubspotChecked)
+       ? `${hubspotChecked ? '<br>' : ''}
         ${res.isPromo ? `<div class="plain-text-line">Extended Special Promo: Stay ${res.promoStay}, Pay ${res.promoPay}</div>` : ''}
         <div class="plain-text-line">${activeNightsCount} nights x ${cur} ${fmt(res.nightly)} = ${cur} ${fmtTot(res.newTot)}</div>
         ${res.isPromo ? `<div class="plain-text-line">${res.freeNights} night${res.freeNights > 1 ? 's' : ''} x ${cur} 0 = ${cur} 0.00</div>` : ''}
@@ -3715,7 +3720,7 @@ function gen(){
    let isLast = (index === arr.length - 1);
    let content = v.customHtml;
 
-   if ((emailProposalChecked || respondioProposalChecked) && isLast && v.isEmailProposal) {
+   if ((emailProposalChecked || respondioProposalChecked || hubspotChecked) && isLast && v.isEmailProposal) {
     let footerNote = `<br><br>We are at your disposal for any further information you may require and help you with your holiday plans in ${regionName}.${availabilityHtml}`;
     content = content.replace(/(<\/div>\s*)$/, footerNote + '$1');
    }
@@ -3727,7 +3732,7 @@ function gen(){
    }
   });
 
-  if ((emailProposalChecked || respondioProposalChecked) && !arr[arr.length - 1].isEmailProposal) {
+  if ((emailProposalChecked || respondioProposalChecked || hubspotChecked) && !arr[arr.length - 1].isEmailProposal) {
    html += `<div class="card" style="font-size:14px; line-height:1.6; color:#000;">We are at your disposal for any further information you may require and help you with your holiday plans in ${regionName}.${availabilityHtml}</div>`;
   }
 
@@ -3762,6 +3767,7 @@ function clearAll() {
  document.getElementById('respondioWithTemplate').checked = false;
  document.getElementById('respondioWithoutTemplate').checked = false;
  document.getElementById('emailProposalToggle').checked = false;
+ document.getElementById('hubspotToggle').checked = false;
  document.getElementById('respondioProposalToggle').checked = false;
  document.getElementById('agentEmailToggle').checked = false;
  document.getElementById('agentRespondioToggle').checked = false;
