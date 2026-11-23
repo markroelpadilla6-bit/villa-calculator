@@ -18,7 +18,11 @@ td{border:1px solid #000;padding:8px 12px;background:#fff;font-size:14px;font-we
 .rich-proposal {font-size: 14px; line-height: 1.6; color: #000; margin-top: 10px;}
 .rich-proposal a {color: #0000ee; text-decoration: underline;}
 
-.instruction-text {color: #ff0000; font-weight: 500; margin-bottom: 20px;}
+.instruction-wrapper {margin-bottom: 20px;}
+.btn-howto {background: #f8fafc; color: #023e8a; border: 1px solid #bce0fd; padding: 7px 14px; font-size: 14px; border-radius: 5px; cursor: pointer; font-weight: bold; margin: 0 0 8px 0; display: inline-flex; align-items: center; gap: 6px;}
+.btn-howto:hover {background: #eef5fc;}
+.instruction-text {display: none; color: #023e8a; font-weight: 500; background: #f4f9ff; border: 1px solid #bce0fd; border-radius: 6px; padding: 12px 16px; margin-top: 4px;}
+.instruction-text p {margin: 6px 0;}
 .top-layout {display:flex;flex-direction:column;gap:15px;margin-bottom:15px;}
 .main-inputs {width:100%;}
 .date-calculator {width:100%;background:#eef5fc;padding:15px;border-radius:6px;border:1px solid #bce0fd;box-sizing:border-box;}
@@ -35,8 +39,11 @@ td{border:1px solid #000;padding:8px 12px;background:#fff;font-size:14px;font-we
 .calc-col input{width:100%;max-width:200px;margin-bottom:10px;display:block;box-sizing:border-box}
 .calc-result{font-weight:bold;font-size:15px;color:#111;margin-top:10px;display:block}
 
-.toggles-container {display: flex; flex-wrap: wrap; gap: 20px; margin-bottom: 10px; font-weight: bold; font-size: 14px;}
-.toggles-container label {cursor: pointer; display: inline-flex; align-items: center; gap: 6px;}
+.toggles-container {display: flex; flex-wrap: wrap; gap: 15px; margin-bottom: 14px; font-size: 14px;}
+.toggle-group {flex: 1; min-width: 220px; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 6px; padding: 12px 15px; box-sizing: border-box;}
+.toggle-group-title {font-weight: bold; font-size: 13px; text-transform: uppercase; letter-spacing: 0.5px; color: #023e8a; border-bottom: 1px solid #cbd5e1; padding-bottom: 6px; margin-bottom: 10px;}
+.toggle-group-items {display: flex; flex-direction: column; gap: 8px; font-weight: bold;}
+.toggle-group-items label {cursor: pointer; display: inline-flex; align-items: center; gap: 6px;}
 
 .logo-container {text-align: center; margin: 15px 0 25px 0;}
 .logo-container img {max-width: 220px; height: auto; display: block; margin: 0 auto;}
@@ -49,7 +56,9 @@ td{border:1px solid #000;padding:8px 12px;background:#fff;font-size:14px;font-we
  <img src="https://www.theluxurysignature.com/wp-content/uploads/2022/09/TLS-logo.png" alt="The Luxury Signature">
 </div>
 
-<div class="instruction-text">
+<div class="instruction-wrapper">
+ <button type="button" class="btn-howto" id="howToBtn">How to use? &#9662;</button>
+ <div class="instruction-text" id="instructionBox">
  <p>1. For <b>NORMAL QUOTATION:</b> Input data as <b>Villa,Rate</b> (one per line, e.g., <i>amann,43620</i>).</p>
  <p>2. For <b>COMBINATION VILLAS:</b> use <b>Villa,Rate + Villa,Rate: Horizon,8965+La Prana,12550</b></p>
  <p>3. For <b>NON-EXCLUSIVE VILLAS:</b> Put * first before the villa name.</p>
@@ -59,6 +68,7 @@ td{border:1px solid #000;padding:8px 12px;background:#fff;font-size:14px;font-we
  <p>7. For <b>FLAT SURCHARGE / PERCENTAGE:</b> (e.g., <b>Amaravida,43620,90</b> or <b>Tsudoi,43620,10%</b>)</p>
  <p>8. For <b>RATE DEDUCTIONS:</b> (e.g., <b>Lomchoy,8460-20%</b> or <b>Lomchoy,8460-300</b> or <b>/Lomchoy,2500-5%</b>)</p>
  <p>9. For <b>SPLIT SEASONS (RC):</b> Use format like: /VillaName,RCrate*# of nights,RCrate*# of nights <b>/zai,5625*3,7500*5</b></p>
+ </div>
 </div>
 
 <div class="top-layout">
@@ -77,14 +87,29 @@ td{border:1px solid #000;padding:8px 12px;background:#fff;font-size:14px;font-we
 </div>
 
 <div class="toggles-container">
- <label><input id="respondioWithTemplate" type="checkbox"> Respondio (With Templates)</label>
- <label><input id="respondioWithoutTemplate" type="checkbox"> Respondio (Without Templates)</label>
- <label><input id="emailProposalToggle" type="checkbox"> Email Proposal</label>
- <label><input id="hubspotToggle" type="checkbox"> HubSpot</label>
- <label><input id="respondioProposalToggle" type="checkbox"> Respondio Proposal</label>
- <label><input id="agentEmailToggle" type="checkbox"> Agent (Email)</label>
- <label><input id="agentRespondioToggle" type="checkbox"> Agent (Respondio)</label>
- <label><input id="nisekoToggle" type="checkbox"> Niseko (Yen Currency)</label>
+ <div class="toggle-group">
+  <div class="toggle-group-title">Respondio</div>
+  <div class="toggle-group-items">
+   <label><input id="respondioWithTemplate" type="checkbox"> Respondio (With Templates)</label>
+   <label><input id="respondioWithoutTemplate" type="checkbox"> Respondio (Without Templates)</label>
+  </div>
+ </div>
+ <div class="toggle-group">
+  <div class="toggle-group-title">Email</div>
+  <div class="toggle-group-items">
+   <label><input id="emailProposalToggle" type="checkbox"> Email Proposal</label>
+   <label><input id="respondioProposalToggle" type="checkbox"> Respondio Proposal</label>
+   <label><input id="hubspotToggle" type="checkbox"> HubSpot</label>
+   <label><input id="nisekoToggle" type="checkbox"> Niseko (Yen Currency)</label>
+  </div>
+ </div>
+ <div class="toggle-group">
+  <div class="toggle-group-title">Agent</div>
+  <div class="toggle-group-items">
+   <label><input id="agentEmailToggle" type="checkbox"> Agent (Email)</label>
+   <label><input id="agentRespondioToggle" type="checkbox"> Agent (Respondio)</label>
+  </div>
+ </div>
 </div>
 <textarea id="data" placeholder="VillaName,Rate">amarapura,43620</textarea><br>
 <button class="btn-gen" id="genBtn">Generate</button>
@@ -3480,9 +3505,68 @@ function gen(){
      }
 
      let htmlTables = '';
+     let isAgentMode = (agentEmailChecked || agentRespondioChecked);
      let isProposalMode = (emailProposalChecked || respondioProposalChecked || hubspotChecked);
 
-     if (isProposalMode) {
+     if (isAgentMode) {
+      let combinedTitleNames = [];
+      let combinedLinks = [];
+      let locationText = 'Kamala';
+      let subProposalsList = [];
+
+      partsCalculated.forEach(res => {
+       let dbRec = findDatabaseRecord(res.villa);
+       let vDisplayName = dbRec ? dbRec.displayName : res.villa;
+       let vUrl = dbRec ? dbRec.url : '#';
+       if (agentRespondioChecked) {
+        combinedTitleNames.push(`${vDisplayName} (x bedrooms)`);
+        combinedLinks.push(`<a href="${vUrl}" target="_blank">${vUrl}</a>`);
+       } else {
+        combinedTitleNames.push(`<a href="${vUrl}" target="_blank">${vDisplayName}</a> (x bedrooms)`);
+       }
+
+       let agentTemplateKey = findAgentTemplateKey(res.villa);
+       let templateStr = (agentTemplateKey && agentProposalTemplates[agentTemplateKey])
+        ? agentProposalTemplates[agentTemplateKey]
+        : (findTemplateKey(res.villa) ? emailProposalTemplates[findTemplateKey(res.villa)] : null);
+
+       if (templateStr) {
+        let renderedSubProp = templateStr.replaceAll('{nightlyRateText}', '').replaceAll('{rateTableHtml}', '');
+        renderedSubProp = renderedSubProp.replace(/^<b>.*?<\/b>(?:<br>)+/i, '');
+        renderedSubProp = renderedSubProp.replace(/<b><a [^>]*>.*?<\/a>[^<]*<\/b>(?:<br>)+/i, '');
+        renderedSubProp = renderedSubProp.replace(/<b><span [^>]*>.*?<\/span>[^<]*<\/b>(?:<br>)+/i, '');
+        renderedSubProp = renderedSubProp.replace(/<b>\s*<\/b>(?:<br>)+/i, '');
+        renderedSubProp = renderedSubProp.replace(/^(?:<br>\s*)+/i, '');
+        renderedSubProp = renderedSubProp.replace(/<br>\s*<\/li>/gi, '</li>');
+
+        if (agentRespondioChecked) {
+         renderedSubProp = formatBulletsForMessaging(renderedSubProp);
+        }
+
+        subProposalsList.push(renderedSubProp);
+       }
+      });
+
+      let combinedHeaderTitle = combinedTitleNames.join(' + ') + ', ' + locationText;
+      if (agentRespondioChecked && combinedLinks.length > 0) {
+       combinedHeaderTitle += '<br>' + combinedLinks.join('<br>');
+      }
+
+      let agentCur = isNiseko ? '¥' : 'USD';
+      let combinedRateText = `<b>${agentCur} ${fmt(combinedNightly)}* per night</b>`;
+
+      let subProposalsHtml = subProposalsList.map((prop, idx) => {
+       if (idx === 0) {
+        return `<div style="margin-top:15px;">${prop}</div>`;
+       } else {
+        return `<div style="margin-top:15px; margin-bottom:15px; font-weight:bold;">AND</div><div>${prop}</div>`;
+       }
+      }).join('');
+
+      htmlTables = `<div class="rich-proposal"><b>${combinedHeaderTitle}</b><br><br>${combinedRateText}${subProposalsHtml}</div>`;
+      arr.push({ villa: '', newTot: totalCombinedSum, customHtml: htmlTables, isEmailProposal: true });
+
+     } else if (isProposalMode) {
       let combinedTitleNames = [];
       let combinedLinks = [];
       let locationText = 'Kamala';
@@ -3797,6 +3881,17 @@ function calculateTax(key, divisor) {
 }
 
 window.addEventListener('DOMContentLoaded', () => {
+ document.getElementById('howToBtn').addEventListener('click', () => {
+  const box = document.getElementById('instructionBox');
+  const btn = document.getElementById('howToBtn');
+  if (box.style.display === 'block') {
+   box.style.display = 'none';
+   btn.innerHTML = 'How to use? &#9662;';
+  } else {
+   box.style.display = 'block';
+   btn.innerHTML = 'How to use? &#9652;';
+  }
+ });
  document.getElementById('genBtn').addEventListener('click', gen);
  document.getElementById('clearBtn').addEventListener('click', clearAll);
  document.getElementById('checkIn').addEventListener('input', handleCheckInChange);
