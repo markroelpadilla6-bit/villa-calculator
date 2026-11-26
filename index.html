@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html><head><meta charset="utf-8"><title>VillaQUOTE V11.9.9</title>
+<html><head><meta charset="utf-8"><title>VillaQUOTE V12.0.0</title>
 <style>
 body{font-family:'Times New Roman', Times, serif;background:#f4f4f4;padding:30px}
 .container{max-width:900px;margin:auto;background:#fff;padding:20px;border-radius:8px;position:relative;}
@@ -22,7 +22,7 @@ td{border:1px solid #000;padding:8px 12px;background:#fff;font-size:14px;font-we
 .btn-howto {background: #f8fafc; color: #023e8a; border: 1px solid #bce0fd; padding: 7px 14px; font-size: 14px; border-radius: 5px; cursor: pointer; font-weight: bold; margin: 0 0 8px 0; display: inline-flex; align-items: center; gap: 6px;}
 .btn-howto:hover {background: #eef5fc;}
 .instruction-text {display: none; color: #023e8a; font-weight: 500; background: #f4f9ff; border: 1px solid #bce0fd; border-radius: 6px; padding: 12px 16px; margin-top: 4px;}
-.instruction-text p {margin: 6px 0;}
+.instruction-text p {margin: 12px 0; line-height: 1.45;}
 .top-layout {display:flex;flex-direction:column;gap:15px;margin-bottom:15px;}
 .main-inputs {width:100%;}
 .date-calculator {width:100%;background:#eef5fc;padding:15px;border-radius:6px;border:1px solid #bce0fd;box-sizing:border-box;}
@@ -51,7 +51,7 @@ td{border:1px solid #000;padding:8px 12px;background:#fff;font-size:14px;font-we
 .footer-credit {text-align: right; font-size: 12px; color: #777; margin-top: 25px; font-style: italic;}
 </style></head><body>
 <div class="container">
-<h2>Villa Quote v11.9.9</h2>
+<h2>Villa Quote v12.0.0</h2>
 <div class="logo-container">
  <img src="https://www.theluxurysignature.com/wp-content/uploads/2022/09/TLS-logo.png" alt="The Luxury Signature">
 </div>
@@ -95,7 +95,7 @@ td{border:1px solid #000;padding:8px 12px;background:#fff;font-size:14px;font-we
   </div>
  </div>
  <div class="toggle-group">
-  <div class="toggle-group-title">Email</div>
+  <div class="toggle-group-title">Proposal</div>
   <div class="toggle-group-items">
    <label><input id="emailProposalToggle" type="checkbox"> Email Proposal</label>
    <label><input id="respondioProposalToggle" type="checkbox"> Respondio Proposal</label>
@@ -174,8 +174,8 @@ const emailProposalTemplates = {
 <li>A team of full-time staff at your service including a villa manager, chef, housekeepers.</li>
 <li>Our chef will do all of your grocery shopping and prepare your meals. (Please note there is 20% of grocery cost as handling fee - subject to 7% VAT).</li>
 <li>Guest Experience services</li>
-<li>Villa Features: Panoramic Ocean view, Swimming pool, Plunge pool, Elevator (except lower level), Spa, pool deck with sun beds, outdoor lounge, Game room with Pool Table near the Estate Clubhouse includes a  tennis court, and a well-equipped gym.<br></li>
-</ul><b>Terms:</b> click the link to view the Villa's <a href="https://amankaraphuket.com/AMANKARA-Terms-and-Conditions.pdf" target="_blank">Terms & Conditions</a>. Note that a refundable security deposit of US$ 2,500 is required in any currency, and may be paid by bank transfer 10 days before arrival or processed via Credit Card 2 days before arrival.`,
+</ul><b>Villa Features:</b> Panoramic Ocean view, Swimming pool, Plunge pool, Elevator (except lower level), Spa, pool deck with sun beds, outdoor lounge, Game room with Pool Table near the Estate Clubhouse includes a  tennis court, and a well-equipped gym.<br><br>
+<b>Terms:</b> click the link to view the Villa's <a href="https://amankaraphuket.com/AMANKARA-Terms-and-Conditions.pdf" target="_blank">Terms & Conditions</a>. Note that a refundable security deposit of US$ 2,500 is required in any currency, and may be paid by bank transfer 10 days before arrival or processed via Credit Card 2 days before arrival.`,
 
  "villaamann": `<b><a href="https://villaamannphuket.com/" target="_blank">Villa Amann</a> - Kamala</b><br>
 {rateTableHtml}<br>
@@ -257,7 +257,7 @@ const emailProposalTemplates = {
 <li>Turndown Service.</li>
 <li>Wireless internet access.</li>
 <li>Guest Experience services<br></li>
-</ul><b>Villa Features:</b> *Infinity Pool, Beachfront Property, BBQ Facilities, Pool table, Board games, Kayak and Paddle board, Snorkeling gear, Multi-purpose room, Mahjong Table.<br>
+</ul><b>Villa Features:</b> *Infinity Pool, Beachfront Property, BBQ Facilities, Pool table, Board games, Kayak and Paddle board, Snorkeling gear, Multi-purpose room, Mahjong Table.<br><br>
 <b>Beach:</b> The villa is located directly in front of the beach, offering lovely beachfront views and easy access to the shoreline. Swimming conditions can vary depending on the tide, with swimming generally more suitable during high tide when sea conditions permit.<br><br>
 <b>Terms:</b> click the link to view the Villa's <a href="https://villaanda.com/ANDA-Terms-and-Conditions.pdf" target="_blank">Terms & Conditions</a>. Note that a refundable security deposit of US$2,500 is required in any currency, and may be paid via Credit Card 2 days before arrival.`,
 
@@ -3226,6 +3226,90 @@ function formatBulletsForMessaging(htmlStr) {
 function fmt(n){return n.toLocaleString('en-US')}
 function fmtTot(n){return n.toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2})}
 
+// Voucher calculator for Phuket / Koh Samui / Bali (USD)
+// Below 5,000          → 0
+// 5,001 to 7,500       → 100
+// 7,501 to 12,000      → 150
+// 12,001 to 15,500     → 200
+// 15,501 to 19,500     → 250
+// 19,501 to 23,000     → 300
+// 23,001 to 27,000     → 350
+// 27,001 to 31,000     → 400
+// 31,001 to 35,000     → 450
+// 35,001 and above     → 500
+function getVoucherAmount(totalRate) {
+  if (isNaN(totalRate) || totalRate <= 5000) return 0;
+  if (totalRate <= 7500) return 100;
+  if (totalRate <= 12000) return 150;
+  if (totalRate <= 15500) return 200;
+  if (totalRate <= 19500) return 250;
+  if (totalRate <= 23000) return 300;
+  if (totalRate <= 27000) return 350;
+  if (totalRate <= 31000) return 400;
+  if (totalRate <= 35000) return 450;
+  return 500;
+}
+
+// Uluwatu Bali villas (IDR voucher table)
+const uluwatuVillaKeys = new Set([
+  'villaambar', 'villachintamani', 'villajamadara', 'villanora',
+  'villapawana', 'villasantaisorga', 'villatamarama'
+]);
+
+// Total Value Booking in IDR → Voucher
+// Below 85,000,000          → 0 (NONE)
+// 85,000,000 to 130,000,000 → 1,700,000
+// 130,000,000 to 210,000,000 → 2,585,000
+// 210,000,000 to 280,000,000 → 3,400,000
+// 280,000,000 to 340,000,000 → 4,300,000
+// 340,000,000 to 400,000,000 → 5,100,000
+// 400,000,000 to 500,000,000 → 6,000,000
+// 500,000,000 to 535,000,000 → 6,800,000
+// 535,000,000 to 605,000,000 → 7,700,000
+// 605,000,000 and above     → 8,600,000
+function getUluwatuVoucherAmount(totalRate) {
+  if (isNaN(totalRate) || totalRate < 85000000) return 0;
+  if (totalRate <= 130000000) return 1700000;
+  if (totalRate <= 210000000) return 2585000;
+  if (totalRate <= 280000000) return 3400000;
+  if (totalRate <= 340000000) return 4300000;
+  if (totalRate <= 400000000) return 5100000;
+  if (totalRate <= 500000000) return 6000000;
+  if (totalRate <= 535000000) return 6800000;
+  if (totalRate <= 605000000) return 7700000;
+  return 8600000;
+}
+
+function isUluwatuVilla(villaName) {
+  const key = cleanVillaKey(villaName || '');
+  return uluwatuVillaKeys.has(key);
+}
+
+// Apply correct voucher (USD or IDR Uluwatu) into the HTML string
+// Callers should only call this when !isNiseko
+function applyVoucherToHtml(html, totalRate, villaNameOrKey) {
+  if (!html) return html;
+  const isUlu = isUluwatuVilla(villaNameOrKey);
+  if (isUlu) {
+    const amt = getUluwatuVoucherAmount(totalRate);
+    if (amt > 0) {
+      // Format with thousand separators for IDR
+      const formatted = amt.toLocaleString('en-US');
+      return html.replace(/IDR XXX/g, 'IDR ' + formatted);
+    } else {
+      // Remove the voucher sentence when below threshold
+      return html.replace(/<span[^>]*>We are pleased to offer you a special (discount )?voucher of IDR XXX[^<]*<\/span>(?:<br>\s*)*/gi, '');
+    }
+  } else {
+    const amt = getVoucherAmount(totalRate);
+    if (amt > 0) {
+      return html.replace(/US\$XXX/g, 'US$' + amt);
+    } else {
+      return html.replace(/<span[^>]*>We are pleased to offer you a special (discount )?voucher of US\$XXX[^<]*<\/span>(?:<br>\s*)*/gi, '');
+    }
+  }
+}
+
 function handleCheckInChange() {
  let checkInVal = document.getElementById('checkIn').value;
  if (!checkInVal) return;
@@ -3539,6 +3623,11 @@ function gen(){
         renderedSubProp = renderedSubProp.replace(/^(?:<br>\s*)+/i, '');
         renderedSubProp = renderedSubProp.replace(/<br>\s*<\/li>/gi, '</li>');
 
+        // Auto-fill voucher (USD or IDR Uluwatu) using combined total
+        if (!isNiseko) {
+          renderedSubProp = applyVoucherToHtml(renderedSubProp, totalCombinedSum, res.villa);
+        }
+
         if (agentRespondioChecked) {
          renderedSubProp = formatBulletsForMessaging(renderedSubProp);
         }
@@ -3593,6 +3682,11 @@ function gen(){
         renderedSubProp = renderedSubProp.replace(/<b><span [^>]*>.*?<\/span>[^<]*<\/b>(?:<br>)+/i, '');
         renderedSubProp = renderedSubProp.replace(/^(?:<br>\s*)+/i, '');
         renderedSubProp = renderedSubProp.replace(/<br>\s*<\/li>/gi, '</li>');
+
+        // Auto-fill voucher (USD or IDR Uluwatu) using combined total
+        if (!isNiseko) {
+          renderedSubProp = applyVoucherToHtml(renderedSubProp, totalCombinedSum, res.villa);
+        }
 
         if (respondioProposalChecked) {
          renderedSubProp = renderedSubProp.replace(/<a href="([^"]+)" target="_blank">([^<]*(?:Terms|Conditions)[^<]*)<\/a>/gi, function(match, url, text) {
@@ -3696,6 +3790,11 @@ function gen(){
       let nightlyRateText = `${agentCur} ${fmt(res.nightly)}* per night`;
       let renderedProposal = agentProposalTemplates[agentTemplateKey].replaceAll('{nightlyRateText}', nightlyRateText);
 
+      // Auto-fill voucher (USD or IDR Uluwatu)
+      if (!isNiseko) {
+        renderedProposal = applyVoucherToHtml(renderedProposal, res.newTot, res.villa);
+      }
+
       if (agentRespondioChecked) {
        renderedProposal = renderedProposal.replace(/<b><a href="([^"]+)" target="_blank">([^<]+)<\/a>([^<]*)<\/b>/g, function(match, url, villaName, restOfTitle) {
         return `<b>${villaName}${restOfTitle}</b><br><a href="${url}" target="_blank">${url}</a>`;
@@ -3725,6 +3824,11 @@ function gen(){
       let renderedProposal = templateStr.replaceAll('{rateTableHtml}', boxedRateTable);
       renderedProposal = renderedProposal.replace(/<br>\s*<\/li>/gi, '</li>');
 
+      // Auto-fill voucher (USD or IDR Uluwatu)
+      if (!isNiseko) {
+        renderedProposal = applyVoucherToHtml(renderedProposal, res.newTot, res.villa);
+      }
+
       if (respondioProposalChecked) {
        renderedProposal = renderedProposal.replace(/<b><a href="([^"]+)" target="_blank">([^<]+)<\/a>([^<]*)<\/b>/g, function(match, url, villaName, restOfTitle) {
         return `<b>${villaName}${restOfTitle}</b><br><a href="${url}" target="_blank">${url}</a><br>`;
@@ -3744,7 +3848,14 @@ function gen(){
        let activeNightsCount = (res.paidNights > 0) ? res.paidNights : nights;
 
        if (includeTemplates && template) {
-        let voucherHtml = template.voucher ? `<div class="respondio-voucher">${template.voucher}</div>` : '';
+        let voucherText = template.voucher || '';
+        if (!isNiseko && voucherText) {
+          // Use helper for consistency (handles both US$ and IDR)
+          voucherText = applyVoucherToHtml(voucherText, res.newTot, res.villa);
+          // If helper removed everything, keep empty
+          if (voucherText.includes('XXX')) voucherText = '';
+        }
+        let voucherHtml = voucherText ? `<div class="respondio-voucher">${voucherText}</div>` : '';
         let villaHeader = `<div class="plain-text-line">${template.displayName} - ${template.location}</div><div class="plain-text-line"><a href="${template.url}" target="_blank">${template.url}</a></div><br>`;
         let descBlock = `<br><div style="font-size:14px; color:#111; margin-top:10px; line-height:1.5;">*${template.desc}</div>`;
 
